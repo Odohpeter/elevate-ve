@@ -140,8 +140,46 @@ function Field({ label, children, required }: { label: string; children: React.R
 
 function StrategyForm() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const inputCls = "w-full rounded-2xl border bg-white px-5 py-4 text-[15px] outline-none focus:border-black/70 transition";
   const inputStyle = { borderColor: "rgba(0,0,0,0.18)", color: deepInk } as React.CSSProperties;
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    try {
+      const form = e.currentTarget;
+      const get = (name: string) =>
+        (form.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement)?.value ?? "";
+      const payload = {
+        name: get("name"),
+        email: get("email"),
+        company: get("company"),
+        phone: "",
+        topic: `Strategy Session — ${get("project_type")}`,
+        message: `Industry: ${get("industry")}\nRevenue: ${get("revenue")}\nProject type: ${get("project_type")}\nBudget: ${get("budget")}\nTimeline: ${get("timeline")}\n\nGoals:\n${get("goals")}`,
+      };
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const json = await res.json();
+      if (json.success) {
+        setSent(true);
+      } else {
+        setError(json.message ?? "Something went wrong. Please try again.");
+      }
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : String(err);
+      setError(`Unable to send (${msg}). Please email us directly.`);
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
     <section id="form" className="relative py-16 sm:py-28 px-5 sm:px-8" style={{ background: mint }}>
       <div className="mx-auto max-w-[1100px] grid grid-cols-12 gap-6 sm:gap-10">
@@ -165,7 +203,13 @@ function StrategyForm() {
         </div>
         <div className="col-span-12 lg:col-span-8">
           {sent ? (
-            <div className="rounded-3xl border bg-white p-10" style={{ borderColor: "rgba(0,0,0,0.12)" }}>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="rounded-3xl border bg-white p-10"
+              style={{ borderColor: "rgba(0,0,0,0.12)" }}
+            >
               <div className="text-[12px] tracking-[0.3em] uppercase" style={{ color: "#3a7d5c" }}>Received</div>
               <h3 className="mt-3 text-[32px] font-semibold leading-tight" style={{ color: deepInk }}>Thank you — we've got it.</h3>
               <p className="mt-4 text-[15px] leading-relaxed" style={{ color: "#2b2b2b" }}>
@@ -174,64 +218,74 @@ function StrategyForm() {
                 reply and we'll move things around.
               </p>
               <button onClick={() => setSent(false)} className="mt-8 rounded-full border px-6 py-3 text-[13px]" style={{ borderColor: "rgba(0,0,0,0.2)", color: deepInk }}>Send another</button>
-            </div>
+            </motion.div>
           ) : (
             <form
-              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+              onSubmit={handleSubmit}
               className="rounded-3xl border bg-white p-6 sm:p-10 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5"
               style={{ borderColor: "rgba(0,0,0,0.12)", boxShadow: "0 30px 80px -40px rgba(0,0,0,0.3)" }}
             >
               <Field label="Name" required>
-                <input required maxLength={100} className={inputCls} style={inputStyle} placeholder="Your full name" />
+                <input name="name" required maxLength={100} className={inputCls} style={inputStyle} placeholder="Your full name" />
               </Field>
               <Field label="Company" required>
-                <input required maxLength={120} className={inputCls} style={inputStyle} placeholder="Company name" />
+                <input name="company" required maxLength={120} className={inputCls} style={inputStyle} placeholder="Company name" />
               </Field>
               <Field label="Work email" required>
-                <input type="email" required maxLength={160} className={inputCls} style={inputStyle} placeholder="you@company.com" />
+                <input name="email" type="email" required maxLength={160} className={inputCls} style={inputStyle} placeholder="you@company.com" />
               </Field>
               <Field label="Industry" required>
-                <select required className={inputCls} style={inputStyle} defaultValue="">
+                <select name="industry" required className={inputCls} style={inputStyle} defaultValue="">
                   <option value="" disabled>Select an industry</option>
                   {INDUSTRIES.map((i) => <option key={i}>{i}</option>)}
                 </select>
               </Field>
               <Field label="Current revenue" required>
-                <select required className={inputCls} style={inputStyle} defaultValue="">
+                <select name="revenue" required className={inputCls} style={inputStyle} defaultValue="">
                   <option value="" disabled>Select a range</option>
                   {REVENUE.map((i) => <option key={i}>{i}</option>)}
                 </select>
               </Field>
               <Field label="Project type" required>
-                <select required className={inputCls} style={inputStyle} defaultValue="">
+                <select name="project_type" required className={inputCls} style={inputStyle} defaultValue="">
                   <option value="" disabled>What are you building?</option>
                   {PROJECT_TYPES.map((i) => <option key={i}>{i}</option>)}
                 </select>
               </Field>
               <Field label="Budget range" required>
-                <select required className={inputCls} style={inputStyle} defaultValue="">
+                <select name="budget" required className={inputCls} style={inputStyle} defaultValue="">
                   <option value="" disabled>Pick a budget</option>
                   {BUDGETS.map((i) => <option key={i}>{i}</option>)}
                 </select>
               </Field>
               <Field label="Timeline" required>
-                <select required className={inputCls} style={inputStyle} defaultValue="">
+                <select name="timeline" required className={inputCls} style={inputStyle} defaultValue="">
                   <option value="" disabled>When do you want to start?</option>
                   {TIMELINES.map((i) => <option key={i}>{i}</option>)}
                 </select>
               </Field>
               <div className="sm:col-span-2">
                 <Field label="Goals" required>
-                  <textarea required maxLength={1500} rows={5} className={inputCls + " resize-none"} style={inputStyle} placeholder="What does success look like in the next 6 months? What's the single thing that, if we solved it together, would matter most?" />
+                  <textarea name="goals" required maxLength={1500} rows={5} className={inputCls + " resize-none"} style={inputStyle} placeholder="What does success look like in the next 6 months? What's the single thing that, if we solved it together, would matter most?" />
                 </Field>
               </div>
+              {error && (
+                <div className="sm:col-span-2 rounded-xl px-4 py-3 text-[13px]" style={{ background: "#fff0f0", color: "#c0392b", border: "1px solid #fcc" }}>
+                  {error}
+                </div>
+              )}
               <div className="sm:col-span-2 flex flex-wrap items-center justify-between gap-4 pt-2">
                 <p className="text-[12px] max-w-[420px]" style={{ color: "#6b6b6b" }}>
                   By submitting you agree we may reply by email. We don't share, sell,
                   or sync your details with any third party.
                 </p>
-                <button type="submit" className="rounded-full px-5 sm:px-8 py-4 text-[14px] hover:opacity-90 transition" style={{ background: deepInk, color: "white" }}>
-                  Request session →
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="rounded-full px-5 sm:px-8 py-4 text-[14px] hover:opacity-90 transition disabled:opacity-60"
+                  style={{ background: deepInk, color: "white" }}
+                >
+                  {loading ? "Sending…" : "Request session →"}
                 </button>
               </div>
             </form>
