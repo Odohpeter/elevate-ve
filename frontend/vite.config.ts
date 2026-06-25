@@ -12,18 +12,14 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  nitro: {
+    preset: "vercel",
+  },
   vite: {
     server: {
       port: 3000,
       host: "0.0.0.0",
       allowedHosts: true,
-      proxy: {
-        "/__l5e": {
-          target: "https://98e1d875-2197-43b3-9fb7-fd7605cc20e7.lovable.app",
-          changeOrigin: true,
-          secure: true,
-        },
-      },
     },
   },
 });
