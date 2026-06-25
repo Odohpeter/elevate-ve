@@ -150,8 +150,46 @@ function Field({ label, children, required, className }: { label: string; childr
 
 function InquiryForm() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
   const inputCls = "w-full rounded-2xl border bg-white px-5 py-4 text-[15px] outline-none focus:border-black/70 transition";
   const inputStyle = { borderColor: "rgba(0,0,0,0.18)", color: deepInk } as React.CSSProperties;
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    try {
+      const form = e.currentTarget;
+      const body = new FormData();
+      body.append("access_key", "fff9e950-8432-4db5-8859-9a5625a003b6");
+      body.append("subject", "New Inquiry from Pejul Website");
+      body.append("name", (form.elements.namedItem("name") as HTMLInputElement).value);
+      body.append("email", (form.elements.namedItem("email") as HTMLInputElement).value);
+      body.append("company", (form.elements.namedItem("company") as HTMLInputElement).value ?? "");
+      body.append("phone", (form.elements.namedItem("phone") as HTMLInputElement).value ?? "");
+      body.append("topic", (form.elements.namedItem("topic") as HTMLSelectElement).value);
+      body.append("message", (form.elements.namedItem("message") as HTMLTextAreaElement).value);
+
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body,
+      });
+      const json = await res.json();
+      if (json.success) {
+        setSent(true);
+      } else {
+        setError(json.message ?? "Something went wrong. Please try again or email us at hi@pejul.com");
+      }
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : String(err);
+      setError(`Unable to send (${msg}). Please email us directly at hi@pejul.com`);
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
     <section id="form" className="relative py-20 sm:py-28 px-5 sm:px-8" style={{ background: mint }}>
       <div className="mx-auto max-w-[1100px] grid grid-cols-12 gap-6 sm:gap-10">
@@ -176,35 +214,41 @@ function InquiryForm() {
         </div>
         <div className="col-span-12 lg:col-span-8">
           {sent ? (
-            <div className="rounded-3xl border bg-white p-10" style={{ borderColor: "rgba(0,0,0,0.12)" }}>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: easeOut }}
+              className="rounded-3xl border bg-white p-10"
+              style={{ borderColor: "rgba(0,0,0,0.12)" }}
+            >
               <div className="text-[12px] tracking-[0.3em] uppercase" style={{ color: "#3a7d5c" }}>Received</div>
               <h3 className="mt-3 text-[32px] font-semibold leading-tight" style={{ color: deepInk }}>Thanks — message landed.</h3>
               <p className="mt-4 text-[15px] leading-relaxed" style={{ color: "#2b2b2b" }}>
                 A partner will reply personally, usually within 4 hours.
               </p>
               <button onClick={() => setSent(false)} className="mt-8 rounded-full border px-6 py-3 text-[13px]" style={{ borderColor: "rgba(0,0,0,0.2)", color: deepInk }}>Send another</button>
-            </div>
+            </motion.div>
           ) : (
             <form
-              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+              onSubmit={handleSubmit}
               className="rounded-3xl border bg-white p-6 sm:p-10 grid grid-cols-12 gap-4 sm:gap-5"
               style={{ borderColor: "rgba(0,0,0,0.12)", boxShadow: "0 30px 80px -40px rgba(0,0,0,0.3)" }}
             >
               <Field label="Name" className="col-span-12 sm:col-span-6" required>
-                <input required maxLength={100} className={inputCls} style={inputStyle} placeholder="Your full name" />
+                <input name="name" required maxLength={100} className={inputCls} style={inputStyle} placeholder="Your full name" />
               </Field>
               <Field label="Company" className="col-span-12 sm:col-span-6">
-                <input maxLength={120} className={inputCls} style={inputStyle} placeholder="Optional" />
+                <input name="company" maxLength={120} className={inputCls} style={inputStyle} placeholder="Optional" />
               </Field>
               <Field label="Email" className="col-span-12 sm:col-span-6" required>
-                <input type="email" required maxLength={160} className={inputCls} style={inputStyle} placeholder="you@company.com" />
+                <input name="email" type="email" required maxLength={160} className={inputCls} style={inputStyle} placeholder="you@company.com" />
               </Field>
               <Field label="Phone" className="col-span-12 sm:col-span-6">
-                <input type="tel" maxLength={40} className={inputCls} style={inputStyle} placeholder="Optional" />
+                <input name="phone" type="tel" maxLength={40} className={inputCls} style={inputStyle} placeholder="Optional" />
               </Field>
               <div className="col-span-12">
                 <Field label="What's it about?" required>
-                  <select required className={inputCls} style={inputStyle} defaultValue="">
+                  <select name="topic" required className={inputCls} style={inputStyle} defaultValue="">
                     <option value="" disabled>Pick a topic</option>
                     {TOPICS.map((t) => <option key={t}>{t}</option>)}
                   </select>
@@ -212,16 +256,26 @@ function InquiryForm() {
               </div>
               <div className="col-span-12">
                 <Field label="Message" required>
-                  <textarea required maxLength={1500} rows={6} className={inputCls + " resize-none"} style={inputStyle} placeholder="A couple of sentences about what you'd like to talk about." />
+                  <textarea name="message" required maxLength={1500} rows={6} className={inputCls + " resize-none"} style={inputStyle} placeholder="A couple of sentences about what you'd like to talk about." />
                 </Field>
               </div>
+              {error && (
+                <div className="col-span-12 rounded-xl px-4 py-3 text-[13px]" style={{ background: "#fff0f0", color: "#c0392b", border: "1px solid #fcc" }}>
+                  {error}
+                </div>
+              )}
               <div className="col-span-12 flex flex-wrap items-center justify-between gap-4 pt-2">
                 <p className="text-[12px] max-w-[420px]" style={{ color: "#6b6b6b" }}>
                   By submitting you agree we may reply by email. We never share or
                   sync your details with third parties.
                 </p>
-                <button type="submit" className="rounded-full w-full sm:w-auto px-8 py-4 text-[14px] hover:opacity-90 transition" style={{ background: deepInk, color: "white" }}>
-                  Send message →
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="rounded-full w-full sm:w-auto px-8 py-4 text-[14px] hover:opacity-90 transition disabled:opacity-60"
+                  style={{ background: deepInk, color: "white" }}
+                >
+                  {loading ? "Sending…" : "Send message →"}
                 </button>
               </div>
             </form>
