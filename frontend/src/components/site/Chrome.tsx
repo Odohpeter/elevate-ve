@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { motion, useScroll, useSpring, useInView, useMotionValue, animate } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import logoHorizontalDark from "@/assets/brand/pejul-horizontal-dark.png.asset.json";
-import logoHorizontalLight from "@/assets/brand/pejul-horizontal-light.png.asset.json";
+import logoHorizontalDark from "@/assets/brand/pejul-horizontal-dark.png";
+import logoHorizontalLight from "@/assets/brand/pejul-horizontal-light.png";
 
 
 export const mint = "#dff7e7";
@@ -229,7 +229,7 @@ export function PillNav() {
       <motion.header initial={{ y: -30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, ease: easeOut }} className="sticky top-4 z-40 px-4">
         <div className="mx-auto max-w-[1400px] flex items-center justify-between gap-6 rounded-full border bg-white/85 backdrop-blur-md px-6 md:px-8 py-3" style={{ borderColor: "rgba(0,0,0,0.12)", boxShadow: "0 10px 40px -20px rgba(0,0,0,0.18)" }}>
           <Link to="/" className="flex items-center" style={{ color: deepInk }} aria-label="Pejul Digital Agency — Home">
-            <img src={logoHorizontalDark.url} alt="Pejul Digital Agency" className="h-8 md:h-9 w-auto" />
+            <img src={logoHorizontalDark} alt="Pejul Digital Agency" className="h-8 md:h-9 w-auto" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-6 text-[11px] tracking-[0.18em] uppercase" style={{ color: deepInk }}>
@@ -323,7 +323,7 @@ export function Footer() {
         {/* Brand */}
         <div className="col-span-2 md:col-span-4">
           <Link to="/" className="inline-flex items-center" style={{ color: "#ffffff" }} aria-label="Pejul Digital Agency — Home">
-            <img src={logoHorizontalLight.url} alt="Pejul Digital Agency" className="h-10 w-auto" />
+            <img src={logoHorizontalLight} alt="Pejul Digital Agency" className="h-10 w-auto" />
           </Link>
 
           <p className="mt-6 text-[13px] leading-relaxed max-w-sm" style={{ color: "rgba(255,255,255,0.6)", fontFamily: "'Inter Tight', sans-serif" }}>

@@ -43,7 +43,7 @@ Import GitHub project (https://github.com/Odohpeter/elevate-ve) and make the con
 - `/privacy`, `/terms` — Legal pages
 
 ## Known Issues
-- Logo and some images use `/__l5e/assets-v1/` Lovable CDN URLs → 404 in Emergent (proxy configured but Lovable CDN requires auth). Works on Lovable/production.
+- All resolved. All 98 images (87 from .asset.json + 11 hardcoded URLs) downloaded from Lovable CDN and stored locally in `/app/frontend/src/assets/`
 
 ## Backlog
 - P0: Fix broken `/__l5e/` image assets (logos, team photos) — replace with actual image files or public CDN URLs

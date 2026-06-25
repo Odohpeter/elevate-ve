@@ -3,21 +3,21 @@ import { motion, useScroll, useSpring } from "motion/react";
 import { useState } from "react";
 import { PillNav, Footer } from "@/components/site/Chrome";
 
-import abdumalikImg from "@/assets/team/abdumalik.png.asset.json";
-import ayazImg from "@/assets/team/ayaz.png.asset.json";
-import blaiseImg from "@/assets/team/blaise.png.asset.json";
-import hamzaImg from "@/assets/team/hamza.png.asset.json";
-import hassanImg from "@/assets/team/hassan.png.asset.json";
-import julianaImg from "@/assets/team/juliana.png.asset.json";
-import peterImg from "@/assets/team/peter.png.asset.json";
-import ramizImg from "@/assets/team/ramiz.png.asset.json";
-import rohailImg from "@/assets/team/rohail.png.asset.json";
-import sajjadImg from "@/assets/team/sajjad.png.asset.json";
-import sameerImg from "@/assets/team/sameer.png.asset.json";
-import sohaibImg from "@/assets/team/sohaib.png.asset.json";
-import subhanImg from "@/assets/team/subhan.png.asset.json";
-import zainImg from "@/assets/team/zain.png.asset.json";
-import ziadImg from "@/assets/team/ziad.png.asset.json";
+import abdumalikImg from "@/assets/team/abdumalik.png";
+import ayazImg from "@/assets/team/ayaz.png";
+import blaiseImg from "@/assets/team/blaise.png";
+import hamzaImg from "@/assets/team/hamza.png";
+import hassanImg from "@/assets/team/hassan.png";
+import julianaImg from "@/assets/team/juliana.png";
+import peterImg from "@/assets/team/peter.png";
+import ramizImg from "@/assets/team/ramiz.png";
+import rohailImg from "@/assets/team/rohail.png";
+import sajjadImg from "@/assets/team/sajjad.png";
+import sameerImg from "@/assets/team/sameer.png";
+import sohaibImg from "@/assets/team/sohaib.png";
+import subhanImg from "@/assets/team/subhan.png";
+import zainImg from "@/assets/team/zain.png";
+import ziadImg from "@/assets/team/ziad.png";
 
 
 export const Route = createFileRoute("/team")({
@@ -107,7 +107,7 @@ const PARTNERS: CrewMember[] = [
     tags: ["Strategy", "Product", "Clients"],
     initials: "PT",
     hue: "#dff7e7",
-    photo: peterImg.url,
+    photo: peterImg,
   },
   {
     name: "Juliana",
@@ -117,7 +117,7 @@ const PARTNERS: CrewMember[] = [
     tags: ["Operations", "Delivery", "People"],
     initials: "JL",
     hue: "#fff1da",
-    photo: julianaImg.url,
+    photo: julianaImg,
   },
   {
     name: "Sameer",
@@ -127,23 +127,23 @@ const PARTNERS: CrewMember[] = [
     tags: ["Architecture", "Platforms", "DX"],
     initials: "SM",
     hue: "#e8f1ff",
-    photo: sameerImg.url,
+    photo: sameerImg,
   },
 ];
 
 const CREW: CrewMember[] = [
-  { name: "Blaise", role: "Project Manager", bio: "Keeps scope, timelines and stakeholders aligned without ever raising a voice.", city: "Nigeria", tags: ["Delivery", "Planning"], initials: "BL", hue: "#dff7e7", photo: blaiseImg.url },
-  { name: "Abdumalik", role: "UI & UX Designer", bio: "Turns rough product thinking into interfaces that feel obvious in hindsight.", city: "Nigeria", tags: ["UI", "UX"], initials: "AB", hue: "#e8f1ff", photo: abdumalikImg.url },
-  { name: "Ayaz", role: "Full Stack Developer", bio: "End-to-end product engineer. Comfortable from schema design to pixel-perfect UI.", city: "Pakistan", tags: ["React", "Node"], initials: "AY", hue: "#e8f1ff", photo: ayazImg.url },
-  { name: "Ramiz", role: "Full Stack Developer", bio: "Builds the boring middle layer so the product feels effortless on top.", city: "Pakistan", tags: ["TypeScript", "APIs"], initials: "RM", hue: "#fff1da", photo: ramizImg.url },
-  { name: "Sajjad", role: "Full Stack Developer", bio: "Pragmatic generalist — ships features across the stack without ceremony.", city: "Pakistan", tags: ["Full Stack", "Postgres"], initials: "SJ", hue: "#f7e0e8", photo: sajjadImg.url },
-  { name: "Subhan", role: "Full Stack Developer", bio: "Goes deep on tricky integrations and the long tail of edge cases.", city: "Pakistan", tags: ["Integrations", "Backend"], initials: "SB", hue: "#e6e6ff", photo: subhanImg.url },
-  { name: "Ziad", role: "Full Stack Developer", bio: "Loves a clean data model and a tight feedback loop.", city: "Pakistan", tags: ["Node", "DB"], initials: "ZD", hue: "#dff7e7", photo: ziadImg.url },
-  { name: "Hamza", role: "Front End Developer", bio: "Treats interface polish as a craft, not a final pass.", city: "Pakistan", tags: ["React", "UI"], initials: "HM", hue: "#e8f1ff", photo: hamzaImg.url },
-  { name: "Rohail", role: "Front End Developer", bio: "Designs in the browser and gets pixels, motion and a11y right the first time.", city: "Pakistan", tags: ["React", "CSS"], initials: "RH", hue: "#fff1da", photo: rohailImg.url },
-  { name: "Sohaib", role: "Front End Developer", bio: "Builds component systems that scale with the product and the team.", city: "Pakistan", tags: ["Design Systems", "React"], initials: "SH", hue: "#f7e0e8", photo: sohaibImg.url },
-  { name: "Hassan", role: "Cybersecurity Expert", bio: "Threat-models everything we ship and hardens the boring infra most teams ignore.", city: "Pakistan", tags: ["Security", "Audits"], initials: "HS", hue: "#e6e6ff", photo: hassanImg.url },
-  { name: "Zain", role: "Quality Assurance Expert", bio: "The last set of eyes before anything leaves the bench. Breaks things on purpose.", city: "Pakistan", tags: ["QA", "Automation"], initials: "ZN", hue: "#dff7e7", photo: zainImg.url },
+  { name: "Blaise", role: "Project Manager", bio: "Keeps scope, timelines and stakeholders aligned without ever raising a voice.", city: "Nigeria", tags: ["Delivery", "Planning"], initials: "BL", hue: "#dff7e7", photo: blaiseImg },
+  { name: "Abdumalik", role: "UI & UX Designer", bio: "Turns rough product thinking into interfaces that feel obvious in hindsight.", city: "Nigeria", tags: ["UI", "UX"], initials: "AB", hue: "#e8f1ff", photo: abdumalikImg },
+  { name: "Ayaz", role: "Full Stack Developer", bio: "End-to-end product engineer. Comfortable from schema design to pixel-perfect UI.", city: "Pakistan", tags: ["React", "Node"], initials: "AY", hue: "#e8f1ff", photo: ayazImg },
+  { name: "Ramiz", role: "Full Stack Developer", bio: "Builds the boring middle layer so the product feels effortless on top.", city: "Pakistan", tags: ["TypeScript", "APIs"], initials: "RM", hue: "#fff1da", photo: ramizImg },
+  { name: "Sajjad", role: "Full Stack Developer", bio: "Pragmatic generalist — ships features across the stack without ceremony.", city: "Pakistan", tags: ["Full Stack", "Postgres"], initials: "SJ", hue: "#f7e0e8", photo: sajjadImg },
+  { name: "Subhan", role: "Full Stack Developer", bio: "Goes deep on tricky integrations and the long tail of edge cases.", city: "Pakistan", tags: ["Integrations", "Backend"], initials: "SB", hue: "#e6e6ff", photo: subhanImg },
+  { name: "Ziad", role: "Full Stack Developer", bio: "Loves a clean data model and a tight feedback loop.", city: "Pakistan", tags: ["Node", "DB"], initials: "ZD", hue: "#dff7e7", photo: ziadImg },
+  { name: "Hamza", role: "Front End Developer", bio: "Treats interface polish as a craft, not a final pass.", city: "Pakistan", tags: ["React", "UI"], initials: "HM", hue: "#e8f1ff", photo: hamzaImg },
+  { name: "Rohail", role: "Front End Developer", bio: "Designs in the browser and gets pixels, motion and a11y right the first time.", city: "Pakistan", tags: ["React", "CSS"], initials: "RH", hue: "#fff1da", photo: rohailImg },
+  { name: "Sohaib", role: "Front End Developer", bio: "Builds component systems that scale with the product and the team.", city: "Pakistan", tags: ["Design Systems", "React"], initials: "SH", hue: "#f7e0e8", photo: sohaibImg },
+  { name: "Hassan", role: "Cybersecurity Expert", bio: "Threat-models everything we ship and hardens the boring infra most teams ignore.", city: "Pakistan", tags: ["Security", "Audits"], initials: "HS", hue: "#e6e6ff", photo: hassanImg },
+  { name: "Zain", role: "Quality Assurance Expert", bio: "The last set of eyes before anything leaves the bench. Breaks things on purpose.", city: "Pakistan", tags: ["QA", "Automation"], initials: "ZN", hue: "#dff7e7", photo: zainImg },
 ];
 
 

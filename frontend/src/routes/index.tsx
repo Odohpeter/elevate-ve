@@ -2,10 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform, useInView, useMotionValue, useSpring, animate } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { PillNav, Footer } from "@/components/site/Chrome";
-import peterImg from "@/assets/team/peter.png.asset.json";
-import julianaImg from "@/assets/team/juliana.png.asset.json";
-import sameerImg from "@/assets/team/sameer.png.asset.json";
-import blaiseImg from "@/assets/team/blaise.png.asset.json";
+import peterImg from "@/assets/team/peter.png";
+import julianaImg from "@/assets/team/juliana.png";
+import sameerImg from "@/assets/team/sameer.png";
+import blaiseImg from "@/assets/team/blaise.png";
 import {
   heroSubheadline,
   trustIndicators,
@@ -623,10 +623,10 @@ function Work() {
 
 /* ---------- TEAM ---------- */
 const team = [
-  { name: "Peter", role: "CEO · Founding Partner", bio: "Sets the direction for every Pejul engagement and reads every inbound brief personally.", tag: "CEO", photo: peterImg.url },
-  { name: "Juliana", role: "COO · Partner", bio: "Runs operations end-to-end so the team can keep shipping. Owns delivery, hiring and client success.", tag: "COO", photo: julianaImg.url },
-  { name: "Sameer", role: "CTO · Partner", bio: "Sets the technical bar across the bench — architecture, code review and the way we ship.", tag: "CTO", photo: sameerImg.url },
-  { name: "Blaise", role: "Project Manager", bio: "Keeps scope, timelines and stakeholders aligned without ever raising a voice.", tag: "PM", photo: blaiseImg.url },
+  { name: "Peter", role: "CEO · Founding Partner", bio: "Sets the direction for every Pejul engagement and reads every inbound brief personally.", tag: "CEO", photo: peterImg },
+  { name: "Juliana", role: "COO · Partner", bio: "Runs operations end-to-end so the team can keep shipping. Owns delivery, hiring and client success.", tag: "COO", photo: julianaImg },
+  { name: "Sameer", role: "CTO · Partner", bio: "Sets the technical bar across the bench — architecture, code review and the way we ship.", tag: "CTO", photo: sameerImg },
+  { name: "Blaise", role: "Project Manager", bio: "Keeps scope, timelines and stakeholders aligned without ever raising a voice.", tag: "PM", photo: blaiseImg },
 ];
 
 function Team() {

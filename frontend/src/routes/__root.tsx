@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import pejulIcon from "@/assets/brand/pejul-icon-green.png";
 
 function NotFoundComponent() {
   return (
@@ -92,8 +93,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/png", href: "/__l5e/assets-v1/3d0e7f4c-3f97-45b7-9a8c-ec50175ff6a5/pejul-icon-green.png" },
-      { rel: "apple-touch-icon", href: "/__l5e/assets-v1/3d0e7f4c-3f97-45b7-9a8c-ec50175ff6a5/pejul-icon-green.png" },
+      { rel: "icon", type: "image/png", href: pejulIcon },
+      { rel: "apple-touch-icon", href: pejulIcon },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

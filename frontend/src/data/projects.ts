@@ -9,76 +9,76 @@ import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
 
 import billsproCover from "@/assets/billspro/cover.jpg";
-import billsproHome from "@/assets/billspro/home.png.asset.json";
-import billsproBills from "@/assets/billspro/bills.png.asset.json";
-import billsproTx from "@/assets/billspro/transactions.png.asset.json";
-import billsproCard from "@/assets/billspro/card.png.asset.json";
-import billsproNaira from "@/assets/billspro/naira.png.asset.json";
-import billsproCrypto from "@/assets/billspro/crypto.png.asset.json";
+import billsproHome from "@/assets/billspro/home.png";
+import billsproBills from "@/assets/billspro/bills.png";
+import billsproTx from "@/assets/billspro/transactions.png";
+import billsproCard from "@/assets/billspro/card.png";
+import billsproNaira from "@/assets/billspro/naira.png";
+import billsproCrypto from "@/assets/billspro/crypto.png";
 
 import earlybazeCover from "@/assets/earlybaze/cover.jpg";
-import ebHome from "@/assets/earlybaze/home.png.asset.json";
-import ebAssets from "@/assets/earlybaze/assets.png.asset.json";
-import ebBitcoin from "@/assets/earlybaze/bitcoin.png.asset.json";
-import ebReceive from "@/assets/earlybaze/receive.png.asset.json";
-import ebSwap from "@/assets/earlybaze/swap.png.asset.json";
-import ebTxSuccess from "@/assets/earlybaze/tx-success.png.asset.json";
-import ebWithdrawal from "@/assets/earlybaze/withdrawal.png.asset.json";
-import ebTransactions from "@/assets/earlybaze/transactions.png.asset.json";
-import ebNairaHome from "@/assets/earlybaze/naira-home.png.asset.json";
+import ebHome from "@/assets/earlybaze/home.png";
+import ebAssets from "@/assets/earlybaze/assets.png";
+import ebBitcoin from "@/assets/earlybaze/bitcoin.png";
+import ebReceive from "@/assets/earlybaze/receive.png";
+import ebSwap from "@/assets/earlybaze/swap.png";
+import ebTxSuccess from "@/assets/earlybaze/tx-success.png";
+import ebWithdrawal from "@/assets/earlybaze/withdrawal.png";
+import ebTransactions from "@/assets/earlybaze/transactions.png";
+import ebNairaHome from "@/assets/earlybaze/naira-home.png";
 
 import colalaCover from "@/assets/colala/cover.jpg";
-import colalaHome from "@/assets/colala/home.png.asset.json";
-import colalaStore from "@/assets/colala/store.png.asset.json";
-import colalaFeed from "@/assets/colala/feed.png.asset.json";
-import colalaServices from "@/assets/colala/services.png.asset.json";
-import colalaChat from "@/assets/colala/chat.png.asset.json";
-import colalaOrders from "@/assets/colala/orders.png.asset.json";
-import colalaWallet from "@/assets/colala/wallet.png.asset.json";
-import colalaLeaderboard from "@/assets/colala/leaderboard.png.asset.json";
-import colalaSubscribe from "@/assets/colala/subscribe.png.asset.json";
+import colalaHome from "@/assets/colala/home.png";
+import colalaStore from "@/assets/colala/store.png";
+import colalaFeed from "@/assets/colala/feed.png";
+import colalaServices from "@/assets/colala/services.png";
+import colalaChat from "@/assets/colala/chat.png";
+import colalaOrders from "@/assets/colala/orders.png";
+import colalaWallet from "@/assets/colala/wallet.png";
+import colalaLeaderboard from "@/assets/colala/leaderboard.png";
+import colalaSubscribe from "@/assets/colala/subscribe.png";
 
 import kokoletCover from "@/assets/kokolet/cover.jpg";
-import kokoletHome from "@/assets/kokolet/home.png.asset.json";
-import kokoletShop from "@/assets/kokolet/shop.png.asset.json";
-import kokoletProduct from "@/assets/kokolet/product.png.asset.json";
-import kokoletCart from "@/assets/kokolet/cart.png.asset.json";
-import kokoletAccount from "@/assets/kokolet/account.png.asset.json";
-import kokoletSettings from "@/assets/kokolet/settings.png.asset.json";
-import kokoletLoyalty from "@/assets/kokolet/loyalty.png.asset.json";
-import kokoletDrop from "@/assets/kokolet/drop.png.asset.json";
-import kokoletHelp from "@/assets/kokolet/help.png.asset.json";
+import kokoletHome from "@/assets/kokolet/home.png";
+import kokoletShop from "@/assets/kokolet/shop.png";
+import kokoletProduct from "@/assets/kokolet/product.png";
+import kokoletCart from "@/assets/kokolet/cart.png";
+import kokoletAccount from "@/assets/kokolet/account.png";
+import kokoletSettings from "@/assets/kokolet/settings.png";
+import kokoletLoyalty from "@/assets/kokolet/loyalty.png";
+import kokoletDrop from "@/assets/kokolet/drop.png";
+import kokoletHelp from "@/assets/kokolet/help.png";
 
 import rhinoxCover from "@/assets/rhinoxpay/cover.jpg";
-import rhinoxHome from "@/assets/rhinoxpay/home.png.asset.json";
-import rhinoxSend from "@/assets/rhinoxpay/send.png.asset.json";
-import rhinoxFiat from "@/assets/rhinoxpay/fiat-wallet.png.asset.json";
-import rhinoxCrypto from "@/assets/rhinoxpay/crypto-wallet.png.asset.json";
-import rhinoxBills from "@/assets/rhinoxpay/bills.png.asset.json";
-import rhinoxP2P from "@/assets/rhinoxpay/p2p.png.asset.json";
-import rhinoxAds from "@/assets/rhinoxpay/ads.png.asset.json";
-import rhinoxHistory from "@/assets/rhinoxpay/history.png.asset.json";
-import rhinoxReceipt from "@/assets/rhinoxpay/receipt.png.asset.json";
+import rhinoxHome from "@/assets/rhinoxpay/home.png";
+import rhinoxSend from "@/assets/rhinoxpay/send.png";
+import rhinoxFiat from "@/assets/rhinoxpay/fiat-wallet.png";
+import rhinoxCrypto from "@/assets/rhinoxpay/crypto-wallet.png";
+import rhinoxBills from "@/assets/rhinoxpay/bills.png";
+import rhinoxP2P from "@/assets/rhinoxpay/p2p.png";
+import rhinoxAds from "@/assets/rhinoxpay/ads.png";
+import rhinoxHistory from "@/assets/rhinoxpay/history.png";
+import rhinoxReceipt from "@/assets/rhinoxpay/receipt.png";
 
 import gpCover from "@/assets/gympaddy/cover.jpg";
-import gpFeed from "@/assets/gympaddy/feed.png.asset.json";
-import gpPost from "@/assets/gympaddy/post.png.asset.json";
-import gpBoost from "@/assets/gympaddy/boost.png.asset.json";
-import gpWallet from "@/assets/gympaddy/wallet.png.asset.json";
-import gpMarket from "@/assets/gympaddy/market.png.asset.json";
-import gpCall from "@/assets/gympaddy/call.png.asset.json";
-import gpProfile from "@/assets/gympaddy/profile.png.asset.json";
-import gpLive from "@/assets/gympaddy/live.png.asset.json";
-import gpChat from "@/assets/gympaddy/chat.png.asset.json";
+import gpFeed from "@/assets/gympaddy/feed.png";
+import gpPost from "@/assets/gympaddy/post.png";
+import gpBoost from "@/assets/gympaddy/boost.png";
+import gpWallet from "@/assets/gympaddy/wallet.png";
+import gpMarket from "@/assets/gympaddy/market.png";
+import gpCall from "@/assets/gympaddy/call.png";
+import gpProfile from "@/assets/gympaddy/profile.png";
+import gpLive from "@/assets/gympaddy/live.png";
+import gpChat from "@/assets/gympaddy/chat.png";
 
-import above20 from "@/assets/above/above-20.png.asset.json";
-import above21 from "@/assets/above/above-21.png.asset.json";
-import above22 from "@/assets/above/above-22.png.asset.json";
-import above23 from "@/assets/above/above-23.png.asset.json";
-import above24 from "@/assets/above/above-24.png.asset.json";
-import above25 from "@/assets/above/above-25.png.asset.json";
-import above26 from "@/assets/above/above-26.png.asset.json";
-import above27 from "@/assets/above/above-27.png.asset.json";
+import above20 from "@/assets/above/above-20.png";
+import above21 from "@/assets/above/above-21.png";
+import above22 from "@/assets/above/above-22.png";
+import above23 from "@/assets/above/above-23.png";
+import above24 from "@/assets/above/above-24.png";
+import above25 from "@/assets/above/above-25.png";
+import above26 from "@/assets/above/above-26.png";
+import above27 from "@/assets/above/above-27.png";
 
 import kokoletPosCover from "@/assets/digitization/kokolet-pos-cover.jpg";
 import kokoletPosCheckout from "@/assets/digitization/kokolet-pos-checkout.jpg";
@@ -89,6 +89,17 @@ import wcssErpHr from "@/assets/digitization/wcss-erp-hr.jpg";
 import mainserviceErpCover from "@/assets/digitization/mainservice-erp-cover.jpg";
 import mainserviceErpWarehouse from "@/assets/digitization/mainservice-erp-warehouse.jpg";
 import mainserviceErpCustoms from "@/assets/digitization/mainservice-erp-customs.jpg";
+import _asset_0_abovelife from "@/assets/portfolio-assets/abovelife-fullpage.png";
+import _asset_1_arctic from "@/assets/portfolio-assets/arctic-cover.jpg";
+import _asset_2_arctic from "@/assets/portfolio-assets/arctic-fullpage.png";
+import _asset_3_gfm from "@/assets/portfolio-assets/gfm-cover.jpg";
+import _asset_4_gfm from "@/assets/portfolio-assets/gfm-fullpage.png";
+import _asset_5_kokolet from "@/assets/portfolio-assets/kokolet-cover.jpg";
+import _asset_6_kokolet from "@/assets/portfolio-assets/kokolet-fullpage.png";
+import _asset_7_earlybaze from "@/assets/portfolio-assets/earlybaze-cover.jpg";
+import _asset_8_earlybaze from "@/assets/portfolio-assets/earlybaze-fullpage.png";
+import _asset_9_crystal from "@/assets/portfolio-assets/crystal-cover.jpg";
+import _asset_10_crystal from "@/assets/portfolio-assets/crystal-fullpage.png";
 
 
 
@@ -139,18 +150,18 @@ export const PROJECTS: Project[] = [
     title: "Colala Mall — a commission-free marketplace for buyers & sellers in Nigeria",
     year: "2025",
     cover: colalaCover,
-    shots: [colalaHome.url, colalaFeed.url, colalaStore.url],
+    shots: [colalaHome, colalaFeed, colalaStore],
     kind: "mobile",
     mobileShots: [
-      { src: colalaHome.url, label: "Buyer Home", caption: "Personalised home feed with categories, top-selling products and sponsored stores." },
-      { src: colalaFeed.url, label: "Social Feed", caption: "An in-app social feed where sellers post products, videos and offers buyers can react to." },
-      { src: colalaServices.url, label: "Services", caption: "Browse physical products and services side-by-side — from fashion designing to electronics." },
-      { src: colalaStore.url, label: "Seller Store", caption: "Each seller gets a branded store with profile, ratings, products and a store builder." },
-      { src: colalaChat.url, label: "Buyer ↔ Seller Chat", caption: "Direct, contextual chat between buyers and sellers — no middleman, no commission." },
-      { src: colalaOrders.url, label: "Order Tracking", caption: "Track every order across placed, out-for-delivery, delivered and completed states." },
-      { src: colalaWallet.url, label: "Shopping Wallet", caption: "An in-app Naira wallet with deposits, withdrawals and payment history." },
-      { src: colalaLeaderboard.url, label: "Seller Leaderboard", caption: "Gamified seller rankings — daily, weekly, monthly and all-time podium." },
-      { src: colalaSubscribe.url, label: "Subscription Plans", caption: "Monthly Ultra plans unlock the marketplace — zero per-transaction commission." },
+      { src: colalaHome, label: "Buyer Home", caption: "Personalised home feed with categories, top-selling products and sponsored stores." },
+      { src: colalaFeed, label: "Social Feed", caption: "An in-app social feed where sellers post products, videos and offers buyers can react to." },
+      { src: colalaServices, label: "Services", caption: "Browse physical products and services side-by-side — from fashion designing to electronics." },
+      { src: colalaStore, label: "Seller Store", caption: "Each seller gets a branded store with profile, ratings, products and a store builder." },
+      { src: colalaChat, label: "Buyer ↔ Seller Chat", caption: "Direct, contextual chat between buyers and sellers — no middleman, no commission." },
+      { src: colalaOrders, label: "Order Tracking", caption: "Track every order across placed, out-for-delivery, delivered and completed states." },
+      { src: colalaWallet, label: "Shopping Wallet", caption: "An in-app Naira wallet with deposits, withdrawals and payment history." },
+      { src: colalaLeaderboard, label: "Seller Leaderboard", caption: "Gamified seller rankings — daily, weekly, monthly and all-time podium." },
+      { src: colalaSubscribe, label: "Subscription Plans", caption: "Monthly Ultra plans unlock the marketplace — zero per-transaction commission." },
     ],
     appStoreUrl: "#",
     playStoreUrl: "#",
@@ -192,18 +203,18 @@ export const PROJECTS: Project[] = [
     title: "Kokolet Luxury — a sneaker & fashion boutique app with a built-in loyalty circle",
     year: "2025",
     cover: kokoletCover,
-    shots: [kokoletHome.url, kokoletProduct.url, kokoletLoyalty.url],
+    shots: [kokoletHome, kokoletProduct, kokoletLoyalty],
     kind: "mobile",
     mobileShots: [
-      { src: kokoletHome.url, label: "Home", caption: "Curated categories, new arrivals and latest drops in a clean editorial layout." },
-      { src: kokoletShop.url, label: "Shop", caption: "Browse Dunks, Jordans, SB Dunks, Air Force and accessories with live search and filters." },
-      { src: kokoletProduct.url, label: "Product Details", caption: "Full product gallery, size picker, size guide and one-tap Buy Now or Add to Bag." },
-      { src: kokoletCart.url, label: "Cart", caption: "Edit quantities, move items to wishlist and review totals before checkout." },
-      { src: kokoletDrop.url, label: "Latest Drops", caption: "Hero drop modal surfaces the newest release the moment users open the app." },
-      { src: kokoletAccount.url, label: "My Account", caption: "Orders, points, tier, referral code and a personal dashboard in one place." },
-      { src: kokoletLoyalty.url, label: "Kokolet Luxury Circle", caption: "Tiered loyalty program — Member → Silver → Gold → Platinum, with points redeemable at checkout." },
-      { src: kokoletSettings.url, label: "Account Settings", caption: "Shopping, account, support and policies grouped into a clean settings tree." },
-      { src: kokoletHelp.url, label: "Help Center", caption: "Order tracking, payments, policies and direct WhatsApp / email / phone support." },
+      { src: kokoletHome, label: "Home", caption: "Curated categories, new arrivals and latest drops in a clean editorial layout." },
+      { src: kokoletShop, label: "Shop", caption: "Browse Dunks, Jordans, SB Dunks, Air Force and accessories with live search and filters." },
+      { src: kokoletProduct, label: "Product Details", caption: "Full product gallery, size picker, size guide and one-tap Buy Now or Add to Bag." },
+      { src: kokoletCart, label: "Cart", caption: "Edit quantities, move items to wishlist and review totals before checkout." },
+      { src: kokoletDrop, label: "Latest Drops", caption: "Hero drop modal surfaces the newest release the moment users open the app." },
+      { src: kokoletAccount, label: "My Account", caption: "Orders, points, tier, referral code and a personal dashboard in one place." },
+      { src: kokoletLoyalty, label: "Kokolet Luxury Circle", caption: "Tiered loyalty program — Member → Silver → Gold → Platinum, with points redeemable at checkout." },
+      { src: kokoletSettings, label: "Account Settings", caption: "Shopping, account, support and policies grouped into a clean settings tree." },
+      { src: kokoletHelp, label: "Help Center", caption: "Order tracking, payments, policies and direct WhatsApp / email / phone support." },
     ],
     appStoreUrl: "#",
     playStoreUrl: "#",
@@ -243,18 +254,18 @@ export const PROJECTS: Project[] = [
     title: "RhinoxPay — send money across Africa, pay bills & trade crypto P2P",
     year: "2025",
     cover: rhinoxCover,
-    shots: [rhinoxHome.url, rhinoxP2P.url, rhinoxBills.url],
+    shots: [rhinoxHome, rhinoxP2P, rhinoxBills],
     kind: "mobile",
     mobileShots: [
-      { src: rhinoxHome.url, label: "Home", caption: "Multi-currency balance, send / fund / convert quick actions and active African wallets in one view." },
-      { src: rhinoxSend.url, label: "Send Funds", caption: "Send to another RhinoxPay user, a bank account, or mobile money across Africa in seconds." },
-      { src: rhinoxFiat.url, label: "Fiat Wallets", caption: "NGN, KSH, GHC and more — hold and switch between African currencies with a unique wallet ID." },
-      { src: rhinoxCrypto.url, label: "Crypto Wallet", caption: "Deposit, withdraw and P2P trade BTC, ETH, SOL, USDT and other assets from a unified crypto wallet." },
-      { src: rhinoxBills.url, label: "Bill Payments", caption: "Airtime, data, electricity, cable TV, betting and internet — paid in a tap from any wallet." },
-      { src: rhinoxP2P.url, label: "P2P Market", caption: "Trade assets directly with other users. Buy or sell across countries with payment-method matching." },
-      { src: rhinoxAds.url, label: "My Ads", caption: "List your own buy / sell ads with limits, payment methods and live order tracking." },
-      { src: rhinoxHistory.url, label: "Transaction History", caption: "Daily, weekly and monthly insights with incoming / outgoing breakdowns across fiat and crypto." },
-      { src: rhinoxReceipt.url, label: "Receipt", caption: "Clean, shareable receipts for every transaction — bank, country, fee and transaction ID." },
+      { src: rhinoxHome, label: "Home", caption: "Multi-currency balance, send / fund / convert quick actions and active African wallets in one view." },
+      { src: rhinoxSend, label: "Send Funds", caption: "Send to another RhinoxPay user, a bank account, or mobile money across Africa in seconds." },
+      { src: rhinoxFiat, label: "Fiat Wallets", caption: "NGN, KSH, GHC and more — hold and switch between African currencies with a unique wallet ID." },
+      { src: rhinoxCrypto, label: "Crypto Wallet", caption: "Deposit, withdraw and P2P trade BTC, ETH, SOL, USDT and other assets from a unified crypto wallet." },
+      { src: rhinoxBills, label: "Bill Payments", caption: "Airtime, data, electricity, cable TV, betting and internet — paid in a tap from any wallet." },
+      { src: rhinoxP2P, label: "P2P Market", caption: "Trade assets directly with other users. Buy or sell across countries with payment-method matching." },
+      { src: rhinoxAds, label: "My Ads", caption: "List your own buy / sell ads with limits, payment methods and live order tracking." },
+      { src: rhinoxHistory, label: "Transaction History", caption: "Daily, weekly and monthly insights with incoming / outgoing breakdowns across fiat and crypto." },
+      { src: rhinoxReceipt, label: "Receipt", caption: "Clean, shareable receipts for every transaction — bank, country, fee and transaction ID." },
     ],
     appStoreUrl: "#",
     playStoreUrl: "#",
@@ -294,18 +305,18 @@ export const PROJECTS: Project[] = [
     title: "GymPaddy — social network, marketplace & live streaming for the fitness community",
     year: "2025",
     cover: gpCover,
-    shots: [gpFeed.url, gpMarket.url, gpWallet.url],
+    shots: [gpFeed, gpMarket, gpWallet],
     kind: "mobile",
     mobileShots: [
-      { src: gpFeed.url, label: "Socials Feed", caption: "Stories, posts, likes, comments and shares — Instagram-style feed built around fitness motivation and routines." },
-      { src: gpPost.url, label: "Create Post", caption: "Post photos and videos from your gallery to share workouts, progress and inspiration with the community." },
-      { src: gpProfile.url, label: "Profile", caption: "Followers, following, posts and videos tabs — follow other fitness lovers and grow your community." },
-      { src: gpMarket.url, label: "Marketplace", caption: "Buy and sell gym equipment, supplements, wears and more. Categories, top listings and location-based search." },
-      { src: gpChat.url, label: "Direct Messages", caption: "1:1 chat with other members with profile preview, follower count and quick call shortcuts." },
-      { src: gpCall.url, label: "Video & Audio Calls", caption: "Connect face-to-face with friends, trainers and partners through built-in video and audio calling." },
-      { src: gpLive.url, label: "Live Streaming + Gifts", caption: "Go live to your followers and receive virtual gifts from viewers in real time." },
-      { src: gpWallet.url, label: "Wallet (GP Coins)", caption: "Earn from gifts in live streams, top up, withdraw to bank, and track every transaction." },
-      { src: gpBoost.url, label: "Boost Ad", caption: "Businesses and fitness experts can boost posts and promote products, services and courses for wider reach." },
+      { src: gpFeed, label: "Socials Feed", caption: "Stories, posts, likes, comments and shares — Instagram-style feed built around fitness motivation and routines." },
+      { src: gpPost, label: "Create Post", caption: "Post photos and videos from your gallery to share workouts, progress and inspiration with the community." },
+      { src: gpProfile, label: "Profile", caption: "Followers, following, posts and videos tabs — follow other fitness lovers and grow your community." },
+      { src: gpMarket, label: "Marketplace", caption: "Buy and sell gym equipment, supplements, wears and more. Categories, top listings and location-based search." },
+      { src: gpChat, label: "Direct Messages", caption: "1:1 chat with other members with profile preview, follower count and quick call shortcuts." },
+      { src: gpCall, label: "Video & Audio Calls", caption: "Connect face-to-face with friends, trainers and partners through built-in video and audio calling." },
+      { src: gpLive, label: "Live Streaming + Gifts", caption: "Go live to your followers and receive virtual gifts from viewers in real time." },
+      { src: gpWallet, label: "Wallet (GP Coins)", caption: "Earn from gifts in live streams, top up, withdraw to bank, and track every transaction." },
+      { src: gpBoost, label: "Boost Ad", caption: "Businesses and fitness experts can boost posts and promote products, services and courses for wider reach." },
     ],
     appStoreUrl: "#",
     playStoreUrl: "#",
@@ -345,15 +356,15 @@ export const PROJECTS: Project[] = [
     title: "BillsPro — crypto, bills & USD virtual cards in one fintech app",
     year: "2026",
     cover: billsproCover,
-    shots: [billsproHome.url, billsproCard.url, billsproCrypto.url],
+    shots: [billsproHome, billsproCard, billsproCrypto],
     kind: "mobile",
     mobileShots: [
-      { src: billsproHome.url, label: "Home", caption: "Naira balance, quick actions, virtual cards & crypto access in one tap." },
-      { src: billsproBills.url, label: "Bill Payments", caption: "Airtime, data, electricity, cable TV, internet and betting — all via BillsPro." },
-      { src: billsproCard.url, label: "Virtual Cards", caption: "USD Visa & Mastercard with Apple Pay / Google Pay support, 3DS controls and freeze." },
-      { src: billsproNaira.url, label: "Naira Wallet", caption: "Deposit, withdraw and pay bills directly from a secure Naira wallet." },
-      { src: billsproCrypto.url, label: "Crypto Wallet", caption: "Buy, sell, send and receive BTC, ETH, USDT and more from a self-custody-style wallet." },
-      { src: billsproTx.url, label: "Transactions", caption: "Unified history across Naira, Crypto and Virtual Card with deposit insights." },
+      { src: billsproHome, label: "Home", caption: "Naira balance, quick actions, virtual cards & crypto access in one tap." },
+      { src: billsproBills, label: "Bill Payments", caption: "Airtime, data, electricity, cable TV, internet and betting — all via BillsPro." },
+      { src: billsproCard, label: "Virtual Cards", caption: "USD Visa & Mastercard with Apple Pay / Google Pay support, 3DS controls and freeze." },
+      { src: billsproNaira, label: "Naira Wallet", caption: "Deposit, withdraw and pay bills directly from a secure Naira wallet." },
+      { src: billsproCrypto, label: "Crypto Wallet", caption: "Buy, sell, send and receive BTC, ETH, USDT and more from a self-custody-style wallet." },
+      { src: billsproTx, label: "Transactions", caption: "Unified history across Naira, Crypto and Virtual Card with deposit insights." },
     ],
     appStoreUrl: "#",
     playStoreUrl: "#",
@@ -393,18 +404,18 @@ export const PROJECTS: Project[] = [
     title: "Earlybaze — buy, sell & swap crypto direct to Naira and ZAR",
     year: "2025",
     cover: earlybazeCover,
-    shots: [ebHome.url, ebBitcoin.url, ebSwap.url],
+    shots: [ebHome, ebBitcoin, ebSwap],
     kind: "mobile",
     mobileShots: [
-      { src: ebHome.url, label: "Crypto Home", caption: "Unified crypto wallet view with quick send, receive, buy and swap." },
-      { src: ebNairaHome.url, label: "Naira Home", caption: "Switch to a dedicated Naira wallet — view balance and withdraw to bank in a tap." },
-      { src: ebAssets.url, label: "Assets", caption: "Trade across BTC, USDT, ETH, SOL, TRX, BNB, TON, OP, MATIC and more." },
-      { src: ebBitcoin.url, label: "Asset Detail", caption: "Live price, holdings, P&L and per-asset activity in one screen." },
-      { src: ebReceive.url, label: "Receive", caption: "Multi-network deposits with QR, address copy and network-mismatch protection." },
-      { src: ebSwap.url, label: "Swap", caption: "Swap any supported coin to Naira (NGN) or another asset at live rates." },
-      { src: ebTxSuccess.url, label: "Sell to Naira", caption: "Sell crypto and credit a Nigerian bank account directly from the app." },
-      { src: ebWithdrawal.url, label: "Withdrawal", caption: "Bank withdrawals with a clear step-by-step status timeline and receipt." },
-      { src: ebTransactions.url, label: "Transactions", caption: "Filterable history across Send, Receive, Buy, Swap and Withdraw with charts." },
+      { src: ebHome, label: "Crypto Home", caption: "Unified crypto wallet view with quick send, receive, buy and swap." },
+      { src: ebNairaHome, label: "Naira Home", caption: "Switch to a dedicated Naira wallet — view balance and withdraw to bank in a tap." },
+      { src: ebAssets, label: "Assets", caption: "Trade across BTC, USDT, ETH, SOL, TRX, BNB, TON, OP, MATIC and more." },
+      { src: ebBitcoin, label: "Asset Detail", caption: "Live price, holdings, P&L and per-asset activity in one screen." },
+      { src: ebReceive, label: "Receive", caption: "Multi-network deposits with QR, address copy and network-mismatch protection." },
+      { src: ebSwap, label: "Swap", caption: "Swap any supported coin to Naira (NGN) or another asset at live rates." },
+      { src: ebTxSuccess, label: "Sell to Naira", caption: "Sell crypto and credit a Nigerian bank account directly from the app." },
+      { src: ebWithdrawal, label: "Withdrawal", caption: "Bank withdrawals with a clear step-by-step status timeline and receipt." },
+      { src: ebTransactions, label: "Transactions", caption: "Filterable history across Send, Receive, Buy, Swap and Withdraw with charts." },
     ],
     appStoreUrl: "#",
     playStoreUrl: "#",
@@ -443,8 +454,8 @@ export const PROJECTS: Project[] = [
     client: "Above Lifestyle (Lekki & Ikotun)",
     title: "From paper menus to a digital restaurant — websites & QR-linked menus for Above Lifestyle",
     year: "2024",
-    cover: above20.url,
-    shots: [above20.url, above21.url, above22.url, above23.url, above24.url, above25.url, above26.url, above27.url],
+    cover: above20,
+    shots: [above20, above21, above22, above23, above24, above25, above26, above27],
     challenge: "Above Lifestyle, a premium restaurant & lounge with branches in Lekki and Ikotun, had no online presence and were handing out paper menus that were constantly being reprinted, lost, or out of date. Guests had no way to discover the brand online, browse the menu before arriving, or make a reservation without calling.",
     solution: "We designed and built a full restaurant website with two branch experiences (Lekki and Ikotun), an intuitive digital menu, ambience galleries, and an online reservation flow. The menu doubles as a QR-linked digital menu — guests scan a code at the table and browse the full menu on their phone, organised by category with prices, images and descriptions that staff can update in minutes instead of reprinting.",
     outcome: "Above Lifestyle launched online in 2024 with a single brand presence covering both branches, eliminated their paper-menu reprint cycle, and gave guests a self-serve way to browse, reserve and explore the venue before they ever walk in.",
@@ -471,7 +482,7 @@ export const PROJECTS: Project[] = [
     duration: "Launched 2024",
     team: "1 designer · 1 engineer",
     website: "abovelifestyle.com",
-    fullpage: "/__l5e/assets-v1/3f9cafb3-b43b-4d95-909c-6039d106a3d3/abovelife-fullpage.png",
+    fullpage: _asset_0_abovelife,
   },
   {
     id: "arctic-obgyn",
@@ -479,7 +490,7 @@ export const PROJECTS: Project[] = [
     client: "Arctic Gynae Centre (Lagos)",
     title: "Putting a specialist OB/GYN centre on the map — website for Arctic Gynae Centre",
     year: "2024",
-    cover: "/__l5e/assets-v1/a271f486-4f0c-4f0f-8ea0-0c8df6cdb526/arctic-cover.jpg",
+    cover: _asset_1_arctic,
     shots: [],
     challenge: "Arctic Gynae Centre, a specialist obstetrics & gynaecology facility in Lagos, had no real digital presence. Women searching online for trusted OB/GYN care in Nigeria couldn't find them, see the facility, meet the doctors, or book an appointment without making a phone call.",
     solution: "We designed and built a clean, trust-led website for Arctic Gynae Centre — introducing the clinic, its specialists, services, and the facility itself through clear sections, real imagery, and an online appointment flow. The site is structured around how patients actually decide: who are the doctors, what does the facility look like, what services do they offer, and how do I book.",
@@ -507,7 +518,7 @@ export const PROJECTS: Project[] = [
     duration: "Launched 2024",
     team: "1 designer · 1 engineer",
     website: "arcticobgyn.com",
-    fullpage: "/__l5e/assets-v1/1628a42d-7e34-4999-aa58-0f29394a9617/arctic-fullpage.png",
+    fullpage: _asset_2_arctic,
   },
   {
     id: "gfm-extensions",
@@ -515,7 +526,7 @@ export const PROJECTS: Project[] = [
     client: "GFM Extensions (Lagos · Canada)",
     title: "Luxury hair extensions e-commerce — website for GFM Extensions",
     year: "2025",
-    cover: "/__l5e/assets-v1/72afa2e7-84d4-4344-b4e8-00e89bb2603b/gfm-cover.jpg",
+    cover: _asset_3_gfm,
     shots: [],
     challenge: "A Canada-based hair stylist with a thriving extensions business in Lagos needed more than an Instagram DM funnel. She wanted a real e-commerce home for her luxury brand — somewhere the modern, sophisticated woman could browse collections, trust the quality, and check out without a back-and-forth.",
     solution: "We designed and built a polished e-commerce website for GFM Extensions — premium product storytelling, organised collections, full product detail pages, cart and secure checkout. The visual language leans into luxury: refined typography, generous imagery, and a feel that matches the price point of the hair itself.",
@@ -543,7 +554,7 @@ export const PROJECTS: Project[] = [
     duration: "Launched 2025",
     team: "1 designer · 1 engineer",
     website: "gfmextensions.com",
-    fullpage: "/__l5e/assets-v1/4452ff6f-f1ec-40e4-8e85-0d40bc0f147c/gfm-fullpage.png",
+    fullpage: _asset_4_gfm,
   },
   {
     id: "kokolet-luxury-web",
@@ -551,7 +562,7 @@ export const PROJECTS: Project[] = [
     client: "Kokolet Luxury (Lagos)",
     title: "A sneaker culture storefront — website for Kokolet Luxury",
     year: "2022",
-    cover: "/__l5e/assets-v1/1acf6b30-0c80-4783-a09c-7c5a16739639/kokolet-cover.jpg",
+    cover: _asset_5_kokolet,
     shots: [],
     challenge: "Kokolet Luxury — already our long-time mobile app client — needed a web home that matched their brand: Jordans, Dunks, Air Force and limited-edition Nike drops, all 100% authentic. Customers searching online needed a credible, premium storefront that proved authenticity at a glance and let them shop without going through DMs.",
     solution: "We designed and built kokoletluxury.com as a bold, sneaker-culture-led e-commerce site — strong typography, large product imagery, organised collections (Jordans, Dunks, Air Force, limited editions), full product detail pages, cart and secure checkout. The site mirrors the energy of the brand and complements the existing mobile app.",
@@ -579,7 +590,7 @@ export const PROJECTS: Project[] = [
     duration: "Launched 2022",
     team: "1 designer · 1 engineer",
     website: "kokoletluxury.com",
-    fullpage: "/__l5e/assets-v1/63cda3e4-eb95-4fd5-afc2-8006a1b16fef/kokolet-fullpage.png",
+    fullpage: _asset_6_kokolet,
   },
   {
     id: "earlybaze-web",
@@ -587,7 +598,7 @@ export const PROJECTS: Project[] = [
     client: "Earlybaze (Lagos)",
     title: "Promoting the wallet — marketing website for Earlybaze",
     year: "2024",
-    cover: "/__l5e/assets-v1/78e3c536-01c5-4403-8810-58ee145a4e48/earlybaze-cover.jpg",
+    cover: _asset_7_earlybaze,
     shots: [],
     challenge: "Earlybaze — our long-time client on the mobile app side — needed a public-facing website to promote the wallet, explain its features, and convince thousands of Nigerians that it was the simplest, most secure way to manage their digital assets. The app stores alone weren't doing enough storytelling.",
     solution: "We designed and built earlybazewallet.com as a focused marketing site — hero positioning, feature breakdowns, security messaging, screenshots of the app, and clear download CTAs to App Store and Play Store. The site does the convincing; the app does the converting.",
@@ -615,7 +626,7 @@ export const PROJECTS: Project[] = [
     duration: "Ongoing partnership",
     team: "1 designer · 1 engineer",
     website: "earlybazewallet.com",
-    fullpage: "/__l5e/assets-v1/e9b621ba-0c9d-40d1-890e-d2174d618f52/earlybaze-fullpage.png",
+    fullpage: _asset_8_earlybaze,
   },
   {
     id: "crystal-suites",
@@ -623,7 +634,7 @@ export const PROJECTS: Project[] = [
     client: "Crystal Suites & Apartments (Lagos)",
     title: "An online home & booking engine — website for Crystal Suites & Apartments",
     year: "2026",
-    cover: "/__l5e/assets-v1/6afafe18-3d63-4461-a361-67c8368e7ef3/crystal-cover.jpg",
+    cover: _asset_9_crystal,
     shots: [],
     challenge: "Crystal Suites & Apartments — a hospitality property in Egbeda, Lagos with a pool, lounge and exclusive club — had no real online presence. Guests couldn't discover the property on Google, see the rooms and amenities, or book a stay without calling. They needed a real website with bookings built in.",
     solution: "We designed and built crystalsuites-apartments.com as a modern hospitality site — hero imagery of the property, rooms and suites with rates, amenities (pool, lounge, club), location details, and an online booking flow so guests can reserve directly from the site. The visual language leans into warm, modern luxury.",
@@ -651,7 +662,7 @@ export const PROJECTS: Project[] = [
     duration: "Launched 2026",
     team: "1 designer · 1 engineer",
     website: "crystalsuites-apartments.com",
-    fullpage: "/__l5e/assets-v1/356edf26-0dd2-4b98-9f21-1f3a2eb68cf9/crystal-fullpage.png",
+    fullpage: _asset_10_crystal,
   },
   {
     id: "kokolet-pos",
