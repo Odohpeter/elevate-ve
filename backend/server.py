@@ -4,9 +4,13 @@ from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
+import smtplib
+import ssl
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict
-from typing import List
+from typing import List, Optional
 import uuid
 from datetime import datetime, timezone
 
@@ -37,10 +41,61 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+class ContactForm(BaseModel):
+    name: str
+    email: str
+    topic: str
+    message: str
+    company: Optional[str] = ""
+    phone: Optional[str] = ""
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
     return {"message": "Hello World"}
+
+@api_router.post("/contact")
+async def contact(data: ContactForm):
+    try:
+        html = f"""
+        <div style="font-family:sans-serif;max-width:600px;margin:0 auto;">
+          <h2 style="color:#1a1a1a;border-bottom:2px solid #e5e5e5;padding-bottom:12px;">New Inquiry — Pejul Website</h2>
+          <table style="width:100%;border-collapse:collapse;margin-top:16px;">
+            <tr><td style="padding:8px 0;color:#666;width:120px;"><strong>Name</strong></td><td style="padding:8px 0;">{data.name}</td></tr>
+            <tr><td style="padding:8px 0;color:#666;"><strong>Email</strong></td><td style="padding:8px 0;"><a href="mailto:{data.email}">{data.email}</a></td></tr>
+            <tr><td style="padding:8px 0;color:#666;"><strong>Company</strong></td><td style="padding:8px 0;">{data.company or "—"}</td></tr>
+            <tr><td style="padding:8px 0;color:#666;"><strong>Phone</strong></td><td style="padding:8px 0;">{data.phone or "—"}</td></tr>
+            <tr><td style="padding:8px 0;color:#666;"><strong>Topic</strong></td><td style="padding:8px 0;">{data.topic}</td></tr>
+          </table>
+          <div style="margin-top:24px;padding:16px;background:#f9f9f9;border-radius:8px;">
+            <strong style="color:#1a1a1a;">Message</strong>
+            <p style="margin-top:8px;color:#333;line-height:1.6;">{data.message.replace(chr(10), "<br>")}</p>
+          </div>
+        </div>
+        """
+        msg = MIMEMultipart("alternative")
+        msg["Subject"] = f"New inquiry: {data.topic} — {data.name}"
+        msg["From"] = os.environ.get("SMTP_FROM", "")
+        msg["To"] = os.environ.get("SMTP_TO", "")
+        msg["Reply-To"] = data.email
+        msg.attach(MIMEText(html, "html"))
+
+        ctx = ssl.create_default_context()
+        with smtplib.SMTP_SSL(
+            os.environ.get("SMTP_HOST", "smtp.titan.email"),
+            int(os.environ.get("SMTP_PORT", "465")),
+            context=ctx
+        ) as server:
+            server.login(os.environ.get("SMTP_USER", ""), os.environ.get("SMTP_PASS", ""))
+            server.sendmail(
+                os.environ.get("SMTP_FROM", ""),
+                os.environ.get("SMTP_TO", ""),
+                msg.as_string()
+            )
+        return {"success": True}
+    except Exception as e:
+        logger.error(f"Contact form error: {e}")
+        return {"success": False, "message": "Failed to send — please try again."}
 
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):

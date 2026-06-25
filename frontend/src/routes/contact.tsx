@@ -162,29 +162,28 @@ function InquiryForm() {
     setError(null);
     try {
       const form = e.currentTarget;
-      const body = new FormData();
-      body.append("access_key", "fff9e950-8432-4db5-8859-9a5625a003b6");
-      body.append("subject", "New Inquiry from Pejul Website");
-      body.append("name", (form.elements.namedItem("name") as HTMLInputElement).value);
-      body.append("email", (form.elements.namedItem("email") as HTMLInputElement).value);
-      body.append("company", (form.elements.namedItem("company") as HTMLInputElement).value ?? "");
-      body.append("phone", (form.elements.namedItem("phone") as HTMLInputElement).value ?? "");
-      body.append("topic", (form.elements.namedItem("topic") as HTMLSelectElement).value);
-      body.append("message", (form.elements.namedItem("message") as HTMLTextAreaElement).value);
-
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const payload = {
+        name: (form.elements.namedItem("name") as HTMLInputElement).value,
+        email: (form.elements.namedItem("email") as HTMLInputElement).value,
+        company: (form.elements.namedItem("company") as HTMLInputElement).value,
+        phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+        topic: (form.elements.namedItem("topic") as HTMLSelectElement).value,
+        message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      };
+      const res = await fetch("/api/contact", {
         method: "POST",
-        body,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
       const json = await res.json();
       if (json.success) {
         setSent(true);
       } else {
-        setError(json.message ?? "Something went wrong. Please try again or email us at hi@pejul.com");
+        setError(json.message ?? "Something went wrong. Please try again.");
       }
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);
-      setError(`Unable to send (${msg}). Please email us directly at hi@pejul.com`);
+      setError(`Unable to send (${msg}). Please email us directly.`);
     } finally {
       setLoading(false);
     }
