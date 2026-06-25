@@ -11,7 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import pejulIcon from "@/assets/brand/pejul-icon-green.png";
+import pejulIcon from "@/assets/brand/pejul-icon-green.webp";
 
 function NotFoundComponent() {
   return (

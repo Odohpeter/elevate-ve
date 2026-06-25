@@ -18,7 +18,9 @@ Import GitHub project (https://github.com/Odohpeter/elevate-ve) and make the con
 - **From / To**: `mail@pejuldigitalagency.com`
 
 ## What's Been Implemented
-- [2026-06-25] Cloned GitHub repo → imported into `/app/frontend`
+- [2026-06-25] Downloaded all 87 `.asset.json` images + 11 hardcoded `/__l5e/` assets from Lovable CDN
+- [2026-06-25] Converted all 150 images (PNG/JPG → WebP, quality 82–85): **66MB → 11MB (-83%)**
+- [2026-06-25] Updated all 16 source files to import `.webp` versions; removed originals & `.asset.json` files
 - [2026-06-25] Configured Vite for Emergent environment (port 3000, allowedHosts, `/__l5e` proxy)
 - [2026-06-25] Added `.yarnrc` with `--ignore-engines` (Node 20 compat)
 - [2026-06-25] Created TanStack Start API route: `src/routes/api/contact.ts` (nodemailer, for Vercel)

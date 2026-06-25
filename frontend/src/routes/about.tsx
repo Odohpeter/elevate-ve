@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import storyImg from "@/assets/about-story.jpg";
-import globeImg from "@/assets/about-globe.jpg";
-import futureImg from "@/assets/about-future.jpg";
-import craftImg from "@/assets/about-craft.jpg";
+import storyImg from "@/assets/about-story.webp";
+import globeImg from "@/assets/about-globe.webp";
+import futureImg from "@/assets/about-future.webp";
+import craftImg from "@/assets/about-craft.webp";
 import {
   PillNav,
   Footer,

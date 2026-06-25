@@ -2,13 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform, useInView, useMotionValue, useSpring, animate } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { OtherServices } from "@/components/site/OtherServices";
-import heroImg from "@/assets/sg-hero.jpg";
-import frameworkImg from "@/assets/sg-framework.jpg";
-import teamImg from "@/assets/sg-team.jpg";
-import caseImg from "@/assets/sg-case.jpg";
-import work1 from "@/assets/work-1.jpg";
-import work2 from "@/assets/work-2.jpg";
-import work3 from "@/assets/work-3.jpg";
+import heroImg from "@/assets/sg-hero.webp";
+import frameworkImg from "@/assets/sg-framework.webp";
+import teamImg from "@/assets/sg-team.webp";
+import caseImg from "@/assets/sg-case.webp";
+import work1 from "@/assets/work-1.webp";
+import work2 from "@/assets/work-2.webp";
+import work3 from "@/assets/work-3.webp";
 import { PillNav, Footer } from "@/components/site/Chrome";
 
 export const Route = createFileRoute("/startup-growth")({

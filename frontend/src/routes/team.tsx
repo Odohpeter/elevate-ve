@@ -3,21 +3,21 @@ import { motion, useScroll, useSpring } from "motion/react";
 import { useState } from "react";
 import { PillNav, Footer } from "@/components/site/Chrome";
 
-import abdumalikImg from "@/assets/team/abdumalik.png";
-import ayazImg from "@/assets/team/ayaz.png";
-import blaiseImg from "@/assets/team/blaise.png";
-import hamzaImg from "@/assets/team/hamza.png";
-import hassanImg from "@/assets/team/hassan.png";
-import julianaImg from "@/assets/team/juliana.png";
-import peterImg from "@/assets/team/peter.png";
-import ramizImg from "@/assets/team/ramiz.png";
-import rohailImg from "@/assets/team/rohail.png";
-import sajjadImg from "@/assets/team/sajjad.png";
-import sameerImg from "@/assets/team/sameer.png";
-import sohaibImg from "@/assets/team/sohaib.png";
-import subhanImg from "@/assets/team/subhan.png";
-import zainImg from "@/assets/team/zain.png";
-import ziadImg from "@/assets/team/ziad.png";
+import abdumalikImg from "@/assets/team/abdumalik.webp";
+import ayazImg from "@/assets/team/ayaz.webp";
+import blaiseImg from "@/assets/team/blaise.webp";
+import hamzaImg from "@/assets/team/hamza.webp";
+import hassanImg from "@/assets/team/hassan.webp";
+import julianaImg from "@/assets/team/juliana.webp";
+import peterImg from "@/assets/team/peter.webp";
+import ramizImg from "@/assets/team/ramiz.webp";
+import rohailImg from "@/assets/team/rohail.webp";
+import sajjadImg from "@/assets/team/sajjad.webp";
+import sameerImg from "@/assets/team/sameer.webp";
+import sohaibImg from "@/assets/team/sohaib.webp";
+import subhanImg from "@/assets/team/subhan.webp";
+import zainImg from "@/assets/team/zain.webp";
+import ziadImg from "@/assets/team/ziad.webp";
 
 
 export const Route = createFileRoute("/team")({

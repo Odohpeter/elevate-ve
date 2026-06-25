@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useSpring, AnimatePresence, useMotionValue, useTransform } from "motion/react";
 import { useMemo, useRef, useState } from "react";
-import pf1 from "@/assets/pf-1.jpg";
-import pf2 from "@/assets/pf-2.jpg";
-import pf3 from "@/assets/pf-3.jpg";
+import pf1 from "@/assets/pf-1.webp";
+import pf2 from "@/assets/pf-2.webp";
+import pf3 from "@/assets/pf-3.webp";
 import { PillNav, Footer } from "@/components/site/Chrome";
 import { PROJECTS, type Category } from "@/data/projects";
 

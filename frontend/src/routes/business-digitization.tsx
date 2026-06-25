@@ -2,13 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform, useInView, useMotionValue, useSpring, animate } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { OtherServices } from "@/components/site/OtherServices";
-import heroImg from "@/assets/bd-hero.jpg";
-import workflowImg from "@/assets/bd-workflow.jpg";
-import dashboardImg from "@/assets/bd-dashboard.jpg";
-import caseImg from "@/assets/bd-case.jpg";
-import work1 from "@/assets/work-1.jpg";
-import work2 from "@/assets/work-2.jpg";
-import work3 from "@/assets/work-3.jpg";
+import heroImg from "@/assets/bd-hero.webp";
+import workflowImg from "@/assets/bd-workflow.webp";
+import dashboardImg from "@/assets/bd-dashboard.webp";
+import caseImg from "@/assets/bd-case.webp";
+import work1 from "@/assets/work-1.webp";
+import work2 from "@/assets/work-2.webp";
+import work3 from "@/assets/work-3.webp";
 import { PillNav, Footer } from "@/components/site/Chrome";
 
 export const Route = createFileRoute("/business-digitization")({

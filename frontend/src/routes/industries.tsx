@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useSpring, useTransform, useMotionValue } from "motion/react";
 import { useMemo, useRef, useState } from "react";
-import indHero from "@/assets/ind-hero.jpg";
+import indHero from "@/assets/ind-hero.webp";
 import { PillNav, Footer } from "@/components/site/Chrome";
 
 export const Route = createFileRoute("/industries")({

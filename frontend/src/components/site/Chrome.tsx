@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { motion, useScroll, useSpring, useInView, useMotionValue, animate } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import logoHorizontalDark from "@/assets/brand/pejul-horizontal-dark.png";
-import logoHorizontalLight from "@/assets/brand/pejul-horizontal-light.png";
+import logoHorizontalDark from "@/assets/brand/pejul-horizontal-dark.webp";
+import logoHorizontalLight from "@/assets/brand/pejul-horizontal-light.webp";
 
 
 export const mint = "#dff7e7";

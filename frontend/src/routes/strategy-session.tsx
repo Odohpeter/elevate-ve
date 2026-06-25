@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useRef, useState } from "react";
-import heroImg from "@/assets/ss-hero.jpg";
+import heroImg from "@/assets/ss-hero.webp";
 import { PillNav, Footer } from "@/components/site/Chrome";
 
 export const Route = createFileRoute("/strategy-session")({

@@ -1,13 +1,13 @@
-import heroImg from "@/assets/hero-cinematic.jpg";
-import pillarSoftware from "@/assets/pillar-software.jpg";
-import pillarGrowth from "@/assets/pillar-growth.jpg";
-import pillarDigi from "@/assets/pillar-digitization.jpg";
-import pillarVenture from "@/assets/vb-hero.jpg";
-import pillarAI from "@/assets/ai-hero.jpg";
-import work1 from "@/assets/kokolet/cover.jpg";
-import work2 from "@/assets/billspro/cover.jpg";
-import work3 from "@/assets/colala/cover.jpg";
-import about from "@/assets/about-boardroom.jpg";
+import heroImg from "@/assets/hero-cinematic.webp";
+import pillarSoftware from "@/assets/pillar-software.webp";
+import pillarGrowth from "@/assets/pillar-growth.webp";
+import pillarDigi from "@/assets/pillar-digitization.webp";
+import pillarVenture from "@/assets/vb-hero.webp";
+import pillarAI from "@/assets/ai-hero.webp";
+import work1 from "@/assets/kokolet/cover.webp";
+import work2 from "@/assets/billspro/cover.webp";
+import work3 from "@/assets/colala/cover.webp";
+import about from "@/assets/about-boardroom.webp";
 
 export const img = {
   hero: heroImg,

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { PillNav, Footer, Eyebrow, PillButton, WordReveal, CountUp, deepInk, mint, mintDeep, easeOut } from "@/components/site/Chrome";
-import hero from "@/assets/why-hero.jpg";
+import hero from "@/assets/why-hero.webp";
 
 export const Route = createFileRoute("/why-pejul")({
   head: () => ({

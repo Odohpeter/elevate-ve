@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { PillNav, Footer, Eyebrow, PillButton, WordReveal, CountUp, deepInk, mint, mintDeep, easeOut } from "@/components/site/Chrome";
-import hero from "@/assets/vb-hero.jpg";
+import hero from "@/assets/vb-hero.webp";
 
 export const Route = createFileRoute("/venture-building")({
   head: () => ({

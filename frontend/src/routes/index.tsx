@@ -2,10 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform, useInView, useMotionValue, useSpring, animate } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { PillNav, Footer } from "@/components/site/Chrome";
-import peterImg from "@/assets/team/peter.png";
-import julianaImg from "@/assets/team/juliana.png";
-import sameerImg from "@/assets/team/sameer.png";
-import blaiseImg from "@/assets/team/blaise.png";
+import peterImg from "@/assets/team/peter.webp";
+import julianaImg from "@/assets/team/juliana.webp";
+import sameerImg from "@/assets/team/sameer.webp";
+import blaiseImg from "@/assets/team/blaise.webp";
 import {
   heroSubheadline,
   trustIndicators,
