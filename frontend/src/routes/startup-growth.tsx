@@ -523,7 +523,7 @@ function CaseStudies() {
 const TIERS = [
   {
     name: "Launch Pod",
-    price: 6500,
+    label: "₦700K",
     suffix: "/mo",
     dur: "1–2 specialists",
     desc: "Best for pre-seed and seed startups going from zero to first traction.",
@@ -531,7 +531,7 @@ const TIERS = [
   },
   {
     name: "Growth Pod",
-    price: 14500,
+    label: "₦1.5M",
     suffix: "/mo",
     dur: "3–4 specialists",
     desc: "Multi-channel team — social, community, content, and paid — managed end-to-end.",
@@ -540,7 +540,7 @@ const TIERS = [
   },
   {
     name: "Scale Pod",
-    price: 28000,
+    label: "₦2.5M",
     suffix: "/mo",
     dur: "5+ specialists",
     desc: "Full growth org for Series A+ startups scaling across markets, products, and channels.",
@@ -573,16 +573,16 @@ function Pricing() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7, delay: i * 0.08, ease: easeOut }}
               whileHover={{ y: -6 }}
-              className={`col-span-12 md:col-span-4 rounded-3xl p-6 sm:p-8 flex flex-col ${t.featured ? "text-white" : "border"}`}
+              className={`col-span-12 md:col-span-4 rounded-3xl p-6 sm:p-8 flex flex-col ${t.featured ? "text-black" : "border"}`}
               style={t.featured ? { background: "#55e6a5" } : { borderColor: "rgba(0,0,0,0.12)", background: "white" }}
             >
               <div className="flex items-center justify-between">
-                <div className="text-[11px] tracking-[0.3em] uppercase" style={t.featured ? { color: mintDeep } : { color: "#6b6b6b" }}>{t.name}</div>
-                {t.featured && <span className="text-[10px] tracking-[0.2em] uppercase px-2 py-1 rounded-full" style={{ background: mintDeep, color: deepInk }}>Most common</span>}
+                <div className="text-[11px] tracking-[0.3em] uppercase" style={t.featured ? { color: deepInk } : { color: "#6b6b6b" }}>{t.name}</div>
+                {t.featured && <span className="text-[10px] tracking-[0.2em] uppercase px-2 py-1 rounded-full" style={{ background: deepInk, color: mintDeep }}>Most common</span>}
               </div>
               <div className="mt-6 sm:mt-8 flex items-baseline gap-2">
                 <span className="text-[34px] sm:text-[44px] md:text-[56px] font-bold tabular-nums leading-none" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
-                  <CountUp to={t.price} prefix="$" />
+                  {t.label}
                 </span>
                 <span className="text-[14px] opacity-70">{t.suffix}</span>
               </div>
@@ -591,7 +591,7 @@ function Pricing() {
               <ul className="mt-5 sm:mt-6 space-y-2 sm:space-y-3 text-[14px]">
                 {t.points.map((p) => (
                   <li key={p} className="flex items-start gap-2">
-                    <span className="mt-[7px] inline-block w-1.5 h-1.5 rounded-full" style={{ background: t.featured ? mintDeep : deepInk }} />
+                    <span className="mt-[7px] inline-block w-1.5 h-1.5 rounded-full" style={{ background: deepInk }} />
                     <span className="opacity-90">{p}</span>
                   </li>
                 ))}
