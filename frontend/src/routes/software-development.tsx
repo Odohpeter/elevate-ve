@@ -597,7 +597,7 @@ function CaseStudies() {
                     <div className="text-[28px] sm:text-[32px] font-bold tabular-nums leading-none" style={{ color: deepInk, fontFamily: "'Inter Tight', sans-serif" }}>{c.metric}</div>
                     <div className="text-[11px] tracking-[0.25em] uppercase mt-1" style={{ color: "#6b6b6b" }}>{c.metricL}</div>
                   </div>
-                  <span className="text-[12px] tracking-[0.2em] uppercase opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all" style={{ color: deepInk }}>Read →</span>
+                  <Link to={c.to} className="text-[12px] tracking-[0.2em] uppercase opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all" style={{ color: deepInk }}>Read →</Link>
                 </div>
               </div>
             </motion.article>
