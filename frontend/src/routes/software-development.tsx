@@ -482,9 +482,9 @@ function TechStack() {
 
 /* ---------- Investment ---------- */
 const TIERS = [
-  { name: "MVP Build", price: 25000, ceil: 60000, dur: "8–12 weeks", desc: "Get to market with a real product — focused scope, senior pod, launch-ready.", points: ["Strategy sprint", "Product design", "Single platform build", "Launch + analytics"] },
-  { name: "Full Product", price: 75000, ceil: 200000, dur: "3–6 months", desc: "Multi-surface products with backend infrastructure, admin tooling, and growth instrumentation.", points: ["Mobile + web", "Auth, payments, admin", "Infrastructure setup", "30-day post-launch support"], featured: true },
-  { name: "Enterprise & Scale", price: 200000, ceil: 0, dur: "6+ months", desc: "Dedicated multi-pod engagements for category-defining products and enterprise systems.", points: ["Multi-pod team", "Compliance & security", "SLA & dedicated support", "Quarterly roadmap planning"] },
+  { name: "Website Development", label: "₦1.5M", dur: "3 Weeks", desc: "A fully responsive, SEO-optimized website built to convert visitors into clients — fast, beautiful, and easy to manage.", points: ["Responsive design (mobile + desktop)", "SEO optimization & page speed", "Content management integration", "Analytics & conversion tracking"] },
+  { name: "Mobile App Development", label: "₦9.5M", dur: "3 Months", desc: "Cross-platform iOS & Android apps engineered for performance, smooth UX, and store approval from day one.", points: ["iOS & Android (React Native)", "UI/UX design & prototyping", "Backend API & push notifications", "App Store & Play Store launch"], featured: true },
+  { name: "Web App Development", label: "₦6.5M", dur: "2 Months", desc: "Custom web applications with robust backends, user authentication, dashboards, and scalable cloud infrastructure.", points: ["Custom UI & dashboard design", "Authentication & role management", "Database design & API integration", "Cloud deployment & scalability"] },
 ];
 
 function Investment() {
@@ -521,13 +521,9 @@ function Investment() {
               </div>
               <div className="mt-8 flex items-baseline gap-2">
                 <span className="text-[36px] sm:text-[44px] md:text-[56px] font-bold tabular-nums leading-none" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
-                  {t.ceil > 0 ? `$${(t.price/1000)|0}k` : `$${(t.price/1000)|0}k`}
+                  {t.label}
                 </span>
-                {t.ceil > 0 ? (
-                  <span className="text-[14px] opacity-70">— ${(t.ceil/1000)|0}k</span>
-                ) : (
-                  <span className="text-[14px] opacity-70">+</span>
-                )}
+                <span className="text-[14px] opacity-70">+</span>
               </div>
               <div className="mt-2 text-[12px] tracking-[0.2em] uppercase opacity-70">{t.dur}</div>
               <p className="mt-5 text-[15px] leading-relaxed opacity-90">{t.desc}</p>

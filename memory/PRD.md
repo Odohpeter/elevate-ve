@@ -44,8 +44,15 @@ Import GitHub project (https://github.com/Odohpeter/elevate-ve) and make the con
 - `/why-pejul` — Why Pejul
 - `/privacy`, `/terms` — Legal pages
 
+## What's Been Implemented (continued)
+- [2026-06-26] Updated pricing section on `/software-development` page:
+  - MVP Build → **Website Development** (₦1.5M+, 3 Weeks)
+  - Full Product → **Mobile App Development** (₦9.5M+, 3 Months) [featured]
+  - Enterprise & Scale → **Web App Development** (₦6.5M+, 2 Months)
+  - Updated descriptions and 4 feature bullets for each card
+
 ## Known Issues
-- All resolved. All 98 images (87 from .asset.json + 11 hardcoded URLs) downloaded from Lovable CDN and stored locally in `/app/frontend/src/assets/`
+- All resolved.
 
 ## Backlog
 - P0: Fix broken `/__l5e/` image assets (logos, team photos) — replace with actual image files or public CDN URLs
