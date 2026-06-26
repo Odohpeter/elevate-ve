@@ -6,9 +6,9 @@ import heroImg from "@/assets/bd-hero.webp";
 import workflowImg from "@/assets/bd-workflow.webp";
 import dashboardImg from "@/assets/bd-dashboard.webp";
 import caseImg from "@/assets/bd-case.webp";
-import work1 from "@/assets/work-1.webp";
-import work2 from "@/assets/work-2.webp";
-import work3 from "@/assets/work-3.webp";
+import kokoletPosCoverImg from "@/assets/digitization/kokolet-pos-cover.webp";
+import wcssErpCoverImg from "@/assets/digitization/wcss-erp-cover.webp";
+import mainserviceErpCoverImg from "@/assets/digitization/mainservice-erp-cover.webp";
 import { PillNav, Footer } from "@/components/site/Chrome";
 
 export const Route = createFileRoute("/business-digitization")({
@@ -419,9 +419,9 @@ function ROISection() {
 
 /* ---------- Case Studies ---------- */
 const CASES = [
-  { img: work1, tag: "Logistics", t: "Replaced a 40-tab spreadsheet stack with a custom ops portal — closing 3 days off every shipment cycle.", metric: "−72%", metricL: "Manual entry" },
-  { img: work2, tag: "Healthcare", t: "WhatsApp + AI intake for a clinic group cut appointment no-shows and freed two full-time admins.", metric: "−48%", metricL: "No-show rate" },
-  { img: work3, tag: "Retail", t: "Unified CRM, POS, and support into one dashboard — leadership now answers in seconds, not days.", metric: "₦2.2B", metricL: "Margin recovered" },
+  { img: kokoletPosCoverImg, tag: "Retail & POS", t: "Custom POS unifying web, app & physical store inventory in real time — checkout under 30 seconds.", metric: "<30s", metricL: "Checkout time", to: "/portfolio/kokolet-pos" },
+  { img: wcssErpCoverImg, tag: "Facilities Mgmt", t: "End-to-end ERP for an IFM group — 10+ modules replacing disconnected spreadsheets across every operation.", metric: "10+", metricL: "Modules unified", to: "/portfolio/wcss-erp" },
+  { img: mainserviceErpCoverImg, tag: "Logistics", t: "Sea freight, warehousing, trucking & customs clearance unified in one ERP — Nigeria to China.", metric: "4-in-1", metricL: "Services unified", to: "/portfolio/mainservice-logistics-erp" },
 ];
 
 function CaseStudies() {
@@ -463,7 +463,7 @@ function CaseStudies() {
                     <div className="text-[32px] font-bold tabular-nums leading-none" style={{ color: deepInk, fontFamily: "'Inter Tight', sans-serif" }}>{c.metric}</div>
                     <div className="text-[11px] tracking-[0.25em] uppercase mt-1" style={{ color: "#6b6b6b" }}>{c.metricL}</div>
                   </div>
-                  <span className="text-[12px] tracking-[0.2em] uppercase opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all" style={{ color: deepInk }}>Read →</span>
+                  <Link to={c.to} className="text-[12px] tracking-[0.2em] uppercase opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all" style={{ color: deepInk }}>Read →</Link>
                 </div>
               </div>
             </motion.article>
