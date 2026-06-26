@@ -2,13 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform, useInView, useMotionValue, useSpring, animate } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { OtherServices } from "@/components/site/OtherServices";
+import { PortfolioCard } from "@/components/site/PortfolioCard";
+import { getProject } from "@/data/projects";
 import heroImg from "@/assets/sd-hero.webp";
 import processImg from "@/assets/sd-process.webp";
 import caseImg from "@/assets/sd-case.webp";
 import industriesImg from "@/assets/sd-industries.webp";
-import kokoletCoverImg from "@/assets/kokolet/cover.webp";
-import colalaCoverImg from "@/assets/colala/cover.webp";
-import earlybazeCoverImg from "@/assets/earlybaze/cover.webp";
 import { PillNav, Footer } from "@/components/site/Chrome";
 
 export const Route = createFileRoute("/software-development")({
@@ -552,11 +551,7 @@ function Investment() {
 }
 
 /* ---------- Case Studies ---------- */
-const CASES = [
-  { img: kokoletCoverImg, tag: "Fashion & Retail", t: "Sneaker & fashion boutique app with a built-in loyalty circle — 4 tiers, live on iOS & Android.", metric: "4", metricL: "Loyalty tiers", to: "/portfolio/kokolet-luxury" },
-  { img: colalaCoverImg, tag: "Marketplace", t: "Commission-free marketplace for Nigerian buyers & sellers — Buyer app, Seller app & PWA.", metric: "0%", metricL: "Per-sale commission", to: "/portfolio/colala-mall" },
-  { img: earlybazeCoverImg, tag: "Crypto", t: "Buy, sell & swap crypto direct to Naira and ZAR — 5-year partnership across 2 markets.", metric: "10+", metricL: "Supported assets", to: "/portfolio/earlybaze-crypto" },
-];
+const SD_PROJECTS = ["kokolet-luxury", "colala-mall", "earlybaze-crypto"].map(getProject).filter(Boolean);
 
 function CaseStudies() {
   return (
@@ -575,33 +570,7 @@ function CaseStudies() {
         </div>
 
         <div className="grid grid-cols-12 gap-4 sm:gap-5">
-          {CASES.map((c, i) => (
-            <motion.article
-              key={c.t}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.7, delay: i * 0.1, ease: easeOut }}
-              whileHover={{ y: -6 }}
-              className="col-span-12 md:col-span-4 group rounded-3xl overflow-hidden bg-white border"
-              style={{ borderColor: "rgba(0,0,0,0.1)" }}
-            >
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <motion.img src={c.img} alt="" loading="lazy" className="w-full h-full object-cover" whileHover={{ scale: 1.05 }} transition={{ duration: 0.7, ease: easeOut }} />
-                <div className="absolute top-4 left-4 text-[10px] tracking-[0.25em] uppercase px-3 py-1 rounded-full bg-white/90" style={{ color: deepInk }}>{c.tag}</div>
-              </div>
-              <div className="p-6 sm:p-7">
-                <h3 className="text-[17px] sm:text-[19px] font-semibold leading-snug" style={{ color: deepInk, fontFamily: "'Inter Tight', sans-serif" }}>{c.t}</h3>
-                <div className="mt-6 flex items-end justify-between">
-                  <div>
-                    <div className="text-[28px] sm:text-[32px] font-bold tabular-nums leading-none" style={{ color: deepInk, fontFamily: "'Inter Tight', sans-serif" }}>{c.metric}</div>
-                    <div className="text-[11px] tracking-[0.25em] uppercase mt-1" style={{ color: "#6b6b6b" }}>{c.metricL}</div>
-                  </div>
-                  <Link to={c.to} className="text-[12px] tracking-[0.2em] uppercase opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all" style={{ color: deepInk }}>Read →</Link>
-                </div>
-              </div>
-            </motion.article>
-          ))}
+          {SD_PROJECTS.map((p, i) => p && <PortfolioCard key={p.id} project={p} index={i} />)}
         </div>
         <div className="mt-12 flex justify-center">
           <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-full border px-7 py-4 text-[13px] tracking-wide hover:bg-black hover:text-white transition" style={{ borderColor: deepInk, color: deepInk }}>

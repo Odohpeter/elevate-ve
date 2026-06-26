@@ -2,13 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform, useInView, useMotionValue, useSpring, animate } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { OtherServices } from "@/components/site/OtherServices";
+import { PortfolioCard } from "@/components/site/PortfolioCard";
+import { getProject } from "@/data/projects";
 import heroImg from "@/assets/bd-hero.webp";
 import workflowImg from "@/assets/bd-workflow.webp";
 import dashboardImg from "@/assets/bd-dashboard.webp";
 import caseImg from "@/assets/bd-case.webp";
-import kokoletPosCoverImg from "@/assets/digitization/kokolet-pos-cover.webp";
-import wcssErpCoverImg from "@/assets/digitization/wcss-erp-cover.webp";
-import mainserviceErpCoverImg from "@/assets/digitization/mainservice-erp-cover.webp";
 import { PillNav, Footer } from "@/components/site/Chrome";
 
 export const Route = createFileRoute("/business-digitization")({
@@ -418,17 +417,13 @@ function ROISection() {
 }
 
 /* ---------- Case Studies ---------- */
-const CASES = [
-  { img: kokoletPosCoverImg, tag: "Retail & POS", t: "Custom POS unifying web, app & physical store inventory in real time — checkout under 30 seconds.", metric: "<30s", metricL: "Checkout time", to: "/portfolio/kokolet-pos" },
-  { img: wcssErpCoverImg, tag: "Facilities Mgmt", t: "End-to-end ERP for an IFM group — 10+ modules replacing disconnected spreadsheets across every operation.", metric: "10+", metricL: "Modules unified", to: "/portfolio/wcss-erp" },
-  { img: mainserviceErpCoverImg, tag: "Logistics", t: "Sea freight, warehousing, trucking & customs clearance unified in one ERP — Nigeria to China.", metric: "4-in-1", metricL: "Services unified", to: "/portfolio/mainservice-logistics-erp" },
-];
+const BD_PROJECTS = ["kokolet-pos", "wcss-erp", "mainservice-logistics-erp"].map(getProject).filter(Boolean);
 
 function CaseStudies() {
   return (
     <section className="relative bg-white py-20 sm:py-32 border-t overflow-hidden" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
-        <div className="grid grid grid-cols-12 gap-6 sm:gap-12 items-end mb-10 sm:mb-14">
+        <div className="grid grid-cols-12 gap-6 sm:gap-12 items-end mb-10 sm:mb-14">
           <div className="col-span-12 lg:col-span-7">
             <Eyebrow>Case Studies</Eyebrow>
             <h2 className="mt-6 text-[clamp(30px,4.5vw,72px)] font-bold leading-[1.0] tracking-[-0.03em]" style={{ color: deepInk, fontFamily: "'Inter Tight', sans-serif" }}>
@@ -440,34 +435,8 @@ function CaseStudies() {
           </motion.div>
         </div>
 
-        <div className="grid grid grid-cols-12 gap-4 sm:gap-5">
-          {CASES.map((c, i) => (
-            <motion.article
-              key={c.t}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.7, delay: i * 0.1, ease: easeOut }}
-              whileHover={{ y: -6 }}
-              className="col-span-12 md:col-span-4 group rounded-3xl overflow-hidden bg-white border"
-              style={{ borderColor: "rgba(0,0,0,0.1)" }}
-            >
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <motion.img src={c.img} alt="" loading="lazy" className="w-full h-full object-cover" whileHover={{ scale: 1.05 }} transition={{ duration: 0.7, ease: easeOut }} />
-                <div className="absolute top-4 left-4 text-[10px] tracking-[0.25em] uppercase px-3 py-1 rounded-full bg-white/90" style={{ color: deepInk }}>{c.tag}</div>
-              </div>
-              <div className="p-6 sm:p-7">
-                <h3 className="text-[19px] font-semibold leading-snug" style={{ color: deepInk, fontFamily: "'Inter Tight', sans-serif" }}>{c.t}</h3>
-                <div className="mt-6 flex items-end justify-between">
-                  <div>
-                    <div className="text-[32px] font-bold tabular-nums leading-none" style={{ color: deepInk, fontFamily: "'Inter Tight', sans-serif" }}>{c.metric}</div>
-                    <div className="text-[11px] tracking-[0.25em] uppercase mt-1" style={{ color: "#6b6b6b" }}>{c.metricL}</div>
-                  </div>
-                  <Link to={c.to} className="text-[12px] tracking-[0.2em] uppercase opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all" style={{ color: deepInk }}>Read →</Link>
-                </div>
-              </div>
-            </motion.article>
-          ))}
+        <div className="grid grid-cols-12 gap-4 sm:gap-5">
+          {BD_PROJECTS.map((p, i) => p && <PortfolioCard key={p.id} project={p} index={i} />)}
         </div>
       </div>
     </section>
