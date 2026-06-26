@@ -619,7 +619,7 @@ const FAQS = [
   { q: "Do you work with non-technical founders?", a: "Yes — most of our clients are. We translate your business vision into product architecture, then walk you through every decision in plain language." },
   { q: "Who owns the code and IP?", a: "You do, fully. All source code, designs, and intellectual property are transferred to you under a written agreement at the start of the engagement." },
   { q: "What stack do you use?", a: "We default to React/Next/TanStack on the web, React Native (with native modules where needed) on mobile, and Node/Python/Go backends on AWS or Cloudflare." },
-  { q: "Do you offer ongoing support after launch?", a: "Yes — 30 days of post-launch support is included on every project. Retainers, on-call SLAs, and dedicated pods are available for products that need them." },
+  { q: "Do you offer ongoing support after launch?", a: "Yes — 12 months of post-launch support is included on every project. Retainers, on-call SLAs, and dedicated pods are available for products that need them." },
   { q: "Can you take over an existing codebase?", a: "Often, yes. We start with a 1-week audit to assess code quality, infrastructure, and team handoff before quoting any work." },
 ];
 
