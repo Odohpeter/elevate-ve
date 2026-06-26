@@ -6,9 +6,9 @@ import heroImg from "@/assets/sd-hero.webp";
 import processImg from "@/assets/sd-process.webp";
 import caseImg from "@/assets/sd-case.webp";
 import industriesImg from "@/assets/sd-industries.webp";
-import work1 from "@/assets/work-1.webp";
-import work2 from "@/assets/work-2.webp";
-import work3 from "@/assets/work-3.webp";
+import kokoletCoverImg from "@/assets/kokolet/cover.webp";
+import colalaCoverImg from "@/assets/colala/cover.webp";
+import earlybazeCoverImg from "@/assets/earlybaze/cover.webp";
 import { PillNav, Footer } from "@/components/site/Chrome";
 
 export const Route = createFileRoute("/software-development")({
@@ -519,11 +519,14 @@ function Investment() {
                 <div className="text-[11px] tracking-[0.3em] uppercase" style={t.featured ? { color: "rgba(0,0,0,0.7)" } : { color: "#6b6b6b" }}>{t.name}</div>
                 {t.featured && <span className="text-[10px] tracking-[0.2em] uppercase px-2 py-1 rounded-full" style={{ background: deepInk, color: mintDeep }}>Most projects</span>}
               </div>
-              <div className="mt-8 flex items-baseline gap-2">
-                <span className="text-[36px] sm:text-[44px] md:text-[56px] font-bold tabular-nums leading-none" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
-                  {t.label}
-                </span>
-                <span className="text-[14px] opacity-70">+</span>
+              <div className="mt-8">
+                <div className="text-[10px] tracking-[0.25em] uppercase opacity-60 mb-1">Starting from</div>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-[36px] sm:text-[44px] md:text-[56px] font-bold tabular-nums leading-none" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
+                    {t.label}
+                  </span>
+                  <span className="text-[14px] opacity-70">+</span>
+                </div>
               </div>
               <div className="mt-2 text-[12px] tracking-[0.2em] uppercase opacity-70">{t.dur}</div>
               <p className="mt-5 text-[15px] leading-relaxed opacity-90">{t.desc}</p>
@@ -550,9 +553,9 @@ function Investment() {
 
 /* ---------- Case Studies ---------- */
 const CASES = [
-  { img: work1, tag: "Fintech", t: "A digital wallet for an underbanked market — 120k users in 9 months.", metric: "+318%", metricL: "MoM growth" },
-  { img: work2, tag: "Marketplace", t: "Two-sided logistics marketplace processing 40k+ shipments/month.", metric: "₦12B", metricL: "GMV / yr" },
-  { img: work3, tag: "Enterprise SaaS", t: "Operations platform that cut a 14-day workflow to under 48 hours.", metric: "−92%", metricL: "Cycle time" },
+  { img: kokoletCoverImg, tag: "Fashion & Retail", t: "Sneaker & fashion boutique app with a built-in loyalty circle — 4 tiers, live on iOS & Android.", metric: "4", metricL: "Loyalty tiers", to: "/portfolio/kokolet-luxury" },
+  { img: colalaCoverImg, tag: "Marketplace", t: "Commission-free marketplace for Nigerian buyers & sellers — Buyer app, Seller app & PWA.", metric: "0%", metricL: "Per-sale commission", to: "/portfolio/colala-mall" },
+  { img: earlybazeCoverImg, tag: "Crypto", t: "Buy, sell & swap crypto direct to Naira and ZAR — 5-year partnership across 2 markets.", metric: "10+", metricL: "Supported assets", to: "/portfolio/earlybaze-crypto" },
 ];
 
 function CaseStudies() {
